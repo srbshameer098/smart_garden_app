@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'Page_1.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -55,11 +57,17 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Center(
-                    child: Image.asset(
+                    child:GestureDetector(
+                  onTap: () {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => Page_1()));
+    },
+    child: Image.asset(
                       "assets/fsp2.png",
                       width: 333.w,
                       height: 186.h,
                     ),
+                  ),
                   ),
                   Center(
                     child: Image.asset(
@@ -339,11 +347,6 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       width: 8.w,
                     ),
-
-
-
-
-
                     BottomSheet(
                         onClosing: () {},
                         builder: (BuildContext context) {
@@ -372,67 +375,156 @@ class _HomeState extends State<Home> {
                                                 color: Colors.white,
                                                 child: Column(
                                                   children: [
-                                                    SizedBox(height: 16.h,),
+                                                    SizedBox(
+                                                      height: 16.h,
+                                                    ),
                                                     Row(
                                                       children: [
                                                         Padding(
-                                                          padding:  EdgeInsets.only(left: 164.w),
+                                                          padding:
+                                                              EdgeInsets.only(
+                                                                  left: 164.w),
                                                           child: Container(
                                                             width: 48.w,
                                                             height: 8.h,
-                                                            decoration: ShapeDecoration(
-                                                              color: Color(0x3F06492C),
-                                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                                                            decoration:
+                                                                ShapeDecoration(
+                                                              color: Color(
+                                                                  0x3F06492C),
+                                                              shape: RoundedRectangleBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4)),
                                                             ),
                                                           ),
                                                         )
-
                                                       ],
                                                     ),
-SizedBox(height: 40.h,),
-
+                                                    SizedBox(
+                                                      height: 40.h,
+                                                    ),
                                                     Row(
                                                       children: [
-                                                        SizedBox(width: 131.w,),
-                                                        Text(
-                                                            "Light Status",
+                                                        SizedBox(
+                                                          width: 131.w,
+                                                        ),
+                                                        Text("Light Status",
                                                             style: TextStyle(
                                                               fontSize: 21.sp,
-                                                              fontWeight: FontWeight.w600,
-                                                            )
-                                                        ),
-
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                            )),
                                                       ],
-                                                    ), SizedBox(height: 32.h,),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 25.h,
+                                                    ),
                                                     SizedBox(
                                                         width: 320.w,
                                                         child: Divider(
                                                           color: Colors.grey,
                                                           thickness: 0.sp,
                                                         )),
-
-
                                                     Padding(
-                                                      padding:  EdgeInsets.only(left: 32.w,right: 32.w,top: 24.h,bottom: 24.h),
+                                                      padding: EdgeInsets.only(
+                                                          left: 30.w,
+                                                          right: 32.w,
+                                                          top: 10.h,
+                                                          bottom: 10.h),
                                                       child: Row(
                                                         children: [
-                                                          Text(
-                                                              "Lights",
+                                                          Text("Lights",
                                                               style: TextStyle(
                                                                 fontSize: 21.sp,
-                                                                fontWeight: FontWeight.w600,
-                                                              )
-                                                          ),
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              )),
                                                           Padding(
-                                                            padding:  EdgeInsets.only(left: 180.w),
-                                                            child: SwitchScreen(),
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                                    left:
+                                                                        180.w),
+                                                            child:
+                                                                SwitchScreen(),
                                                           ),
                                                         ],
                                                       ),
-                                                    )
-
-
-
+                                                    ),
+                                                    SizedBox(
+                                                        width: 320.w,
+                                                        child: Divider(
+                                                          color: Colors.grey,
+                                                          thickness: 0.sp,
+                                                        )),
+                                                    Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: 30.w,
+                                                          right: 32.w,
+                                                          top: 20.h,
+                                                          bottom: 15.h),
+                                                      child: Row(
+                                                        children: [
+                                                          Text(
+                                                              "Automatic Settings",
+                                                              style: TextStyle(
+                                                                fontSize: 20.sp,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              )),
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                                    left: 37.w),
+                                                            child: Text(
+                                                                "Off at Sunset",
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: Color(
+                                                                      0xff0C9359),
+                                                                  fontSize:
+                                                                      12.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                )),
+                                                          ),
+                                                          SizedBox(
+                                                            width: 3.w,
+                                                          ),
+                                                          Icon(
+                                                            Icons
+                                                                .arrow_forward_ios,
+                                                            color: Color(
+                                                                0xff0C9359),
+                                                            size: 18.sp,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 10.h,
+                                                    ),
+                                                    SizedBox(
+                                                        width: 320.w,
+                                                        child: Divider(
+                                                          color: Colors.grey,
+                                                          thickness: 0.sp,
+                                                        )),
+                                                    SizedBox(
+                                                      height: 20.h,
+                                                    ),
+                                                    Text("Go to Settings",
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xff0C9359),
+                                                          fontSize: 18.sp,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                        ))
                                                   ],
                                                 ),
                                               ),
@@ -441,6 +533,7 @@ SizedBox(height: 40.h,),
                                         );
                                       },
                                       child: Container(
+
                                         width: 94.w,
                                         height: 94.h,
                                         decoration: BoxDecoration(
@@ -496,8 +589,6 @@ class Modul1 extends StatelessWidget {
   }
 }
 
-
-
 class SwitchScreen extends StatefulWidget {
   @override
   SwitchClass createState() => new SwitchClass();
@@ -508,40 +599,34 @@ class SwitchClass extends State {
   var textValue = 'Switch is OFF';
 
   void toggleSwitch(bool value) {
-
-    if(isSwitched == false)
-    {
+    if (isSwitched == false) {
       setState(() {
         isSwitched = true;
         textValue = 'Switch Button is ON';
       });
-       print('Switch Button is ON');
-    }
-    else
-    {
+      print('Switch Button is ON');
+    } else {
       setState(() {
         isSwitched = false;
         textValue = 'Switch Button is OFF';
       });
-        print('Switch Button is OFF');
+      print('Switch Button is OFF');
     }
   }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children:[ Transform.scale(
-            scale: 0.7,
-            child: Switch(
-              onChanged: toggleSwitch,
-              value: isSwitched,
-              activeColor: Colors.white,
-              activeTrackColor: Colors.grey.shade300,
-              // inactiveThumbColor: Colors.white,
-              inactiveTrackColor: Colors.grey.shade300,
-            )
-        ),
-
-        ]);
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Transform.scale(
+          scale: 0.9,
+          child: Switch(
+            onChanged: toggleSwitch,
+            value: isSwitched,
+            activeColor: Colors.white,
+            activeTrackColor: Color(0xff0C9359),
+            // inactiveThumbColor: Colors.white,
+            inactiveTrackColor: Colors.grey.shade300,
+          )),
+    ]);
   }
 }
