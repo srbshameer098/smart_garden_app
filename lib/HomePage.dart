@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 backgroundColor:Color(0xff0C9359) ,
       body: Container(color: Color(0xff0C9359),
 
-      child: Stack(children: [Image.asset("assets/bg_1.png"),
+      child: Stack(children: [
 
 
         Positioned(
