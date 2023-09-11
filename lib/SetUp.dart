@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_garden_app/Bottomnav.dart';
 import 'package:smart_garden_app/Home.dart';
 class SetUp extends StatefulWidget {
   const SetUp({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class _SetUpState extends State<SetUp> {
         child:   SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(height: 120.h,),
               Text(
@@ -45,10 +47,10 @@ class _SetUpState extends State<SetUp> {
               ),
 
               Container(
-                  width: 374,
-                  height: 85,
+                  width: 374.w,
+                  height: 85.h,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                       color: Colors.greenAccent
                   ),
                   child:Padding(
@@ -107,10 +109,10 @@ SizedBox(width: 84.w,),
 
 
 Container(
-    width: 374,
-    height: 85,
+    width: 374.w,
+    height: 85.r,
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
         color: Colors.greenAccent),
 
 
@@ -171,10 +173,10 @@ padding:  EdgeInsets.only(left:12.w,top:20.h,right: 15.w),
 
 
               Container(
-                  width: 374,
-                  height: 56,
+                  width: 374.w,
+                  height: 56.h,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                       color: Colors.greenAccent),
 
 
@@ -218,7 +220,7 @@ padding:  EdgeInsets.only(left:12.w,top:20.h,right: 15.w),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (_) => Home()));
+                          .push(MaterialPageRoute(builder: (_) => BottomNav()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -231,7 +233,7 @@ padding:  EdgeInsets.only(left:12.w,top:20.h,right: 15.w),
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (_) => Home()));
+                                .push(MaterialPageRoute(builder: (_) => BottomNav()));
                           },
                           child: Text("Continue ",
                               style: TextStyle(
