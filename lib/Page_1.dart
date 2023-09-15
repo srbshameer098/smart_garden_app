@@ -732,19 +732,269 @@ class _Page_1State extends State<Page_1> {
                                       ],
                                     ),
                                   ),
+
+ // -------------------  sub container 2  --------------------------
+
+
+                                  Container(
+                                    margin: EdgeInsets.all(8),
+                                      width: 358,
+                                      height: 110,
+                                      decoration: BoxDecoration(
+                                          border: Border.all(color: Colors.grey,width: 0.2),
+                                          borderRadius: BorderRadius.circular(4)),
+                                    child: Padding(
+                                      padding:  EdgeInsets.only(left: 16.w,right: 16.w,top:20.h,bottom: 16.h ),
+                                      child: Column(
+                                        children: [
+                                          Row(children:[
+
+
+                                            Icon(
+                                              Icons.play_circle_outline,
+                                              size: 20.sp,
+                                              color: Color(0xff78c0ab),
+                                            ),
+                                            SizedBox(width: 6.w,),
+                                            Text(
+                                                "New cycle started",
+                                                style: TextStyle(
+                                                  fontSize: 16.sp,
+                                                  color: Color(0xff06492C),
+                                                  fontWeight: FontWeight.w700,
+                                                )
+                                            ),
+SizedBox(width: 101.w,),
+                                            Text(
+                                                "5m",
+                                                style: TextStyle(
+                                                  fontSize: 14.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                )
+                                            )
+
+
+
+                                          ]),
+SizedBox(height: 14.h,),
+                                          Row(
+
+                                            children: [
+                                              Text(
+                                                  "You just started a new cycle, time to grow \n new plants 😊 ",
+                                                  style: TextStyle(
+                                                    fontSize: 14.sp,
+                                                    fontWeight: FontWeight.w400,
+                                                  )
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+
+   // -------------------  sub container 3  --------------------------
+
+
+                                  Container(margin: EdgeInsets.all(8.0),
+                                      width: 358,
+                                      height: 58,
+                                      decoration: BoxDecoration(
+                                          border: Border.all(color: Colors.grey,width: 0.2),
+                                          borderRadius: BorderRadius.circular(4)),
+                                    child: Padding(
+                                      padding:  EdgeInsets.only(left: 16.w,right: 16.h,top:20.h,bottom: 20.h ),
+                                      child: Row(
+                                        children: [
+                                          Image.asset("assets/plant1.png",width:20.w ,height: 20.h,),
+                                          SizedBox(width: 5.w,),
+                                          Text(
+                                              "Oregano ready for harvest",
+                                              style: TextStyle(
+                                                fontSize: 15.sp,
+                                                fontWeight: FontWeight.w700,
+                                              )
+                                          ),
+
+SizedBox(width: 12.w,),
+                                          Text(
+                                              "2 days ago",
+                                              style: TextStyle(
+                                                fontSize: 12.sp,
+                                                fontWeight: FontWeight.w400,
+                                              )
+                                          )
+
+                                        ],
+                                      ),
+                                    ),
+
+
+                                  )
+
+
+
+
                                 ],
                               ),
                             )
                           ]),
 
                           // --------------------------------------------  settings column 1  -------------------------------------------
-                          Column(children: [
-                            Text("Mints",
-                                style: TextStyle(
-                                  fontSize: 21.sp,
-                                  fontWeight: FontWeight.w600,
-                                )),
-                          ])
+                           Column(
+                                children: [
+                              // -------------------  sub container 3  --------------------------
+                            // Padding(
+                            // padding:  EdgeInsets.only(left: 8.w,right: 8.w,top: 20.h,bottom: 20.h),
+                            //   child:
+                              Container(
+                                width: 374.w,
+                                height: 272.h,
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey,width: 0.2),
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding:  EdgeInsets.only(left: 10.w,right: 10.w,top: 20.h,bottom: 20.h),
+                                  child: Column(
+                                    children: [
+
+          //--------------------------- row 1 ----------------------------
+                                      SizedBox(height: 4.h,),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.signal_wifi_0_bar_rounded, color: Color(
+                                              0xff96e8c8),),
+                                          SizedBox(width:10.w ,),
+                                          Text(
+                                              "Connectivity",
+                                              style: TextStyle(
+                                                fontSize: 16.sp,
+                                                color: Color(0xff06492C),
+                                                fontWeight: FontWeight.w700,
+                                              )
+                                          ),
+                                          SizedBox(width:30.w ,),
+                                          Text(
+                                              "Connected via Wifi",
+                                              style: TextStyle(
+                                                fontSize: 14.sp,
+                                                color: Color(0xff2c7754),
+                                                fontWeight: FontWeight.w400,
+                                              )
+                                          ),
+                                          SizedBox(width:6.w ,),
+                                          Icon(Icons.arrow_forward_ios_outlined, color: Color(0xff2c7754),size: 20.sp,),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding:  EdgeInsets.only(top: 12.h),
+                                        child: SizedBox(width: 358.w,
+                                            child: Divider(thickness: 0.0,)),
+                                      ),
+
+                //--------------------------- row 2 ----------------------------
+SizedBox(height: 15.h,),
+
+                                      Row(
+                                        children: [
+                                          Icon(Icons.lightbulb_outline, color: Color(
+                                              0xff96e8c8),),
+                                          SizedBox(width:10.w ,),
+                                          Text(
+                                              "Plantlight Settings",
+                                              style: TextStyle(
+                                                fontSize: 16.sp,
+                                                color: Color(0xff06492C),
+                                                fontWeight: FontWeight.w700,
+                                              )
+                                          ),
+                                          SizedBox(width:28.w ,),
+                                          Text(
+                                              "Currently ON",
+                                              style: TextStyle(
+                                                fontSize: 14.sp,
+                                                color: Color(0xff2c7754),
+                                                fontWeight: FontWeight.w400,
+                                              )
+                                          ),
+                                          SizedBox(width:6.w ,),
+                                          Icon(Icons.arrow_forward_ios_outlined, color: Color(0xff2c7754),size: 20.sp,),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding:  EdgeInsets.only(top: 12.h),
+                                        child: SizedBox(width: 358.w,
+                                            child: Divider(thickness: 0.0,)),
+                                      ),
+
+
+                                      //--------------------------- row 3 ----------------------------
+                                      SizedBox(height: 15.h,),
+
+                                      Row(
+                                        children: [
+                                          Image.asset("assets/plant1.png",width: 24.w,
+                                          height: 24.h,
+                                          color: Color(
+                                              0xff96e8c8),),
+                                          SizedBox(width:10.w ,),
+                                          Text(
+                                              "Cycle Settings",
+                                              style: TextStyle(
+                                                fontSize: 16.sp,
+                                                color: Color(0xff06492C),
+                                                fontWeight: FontWeight.w700,
+                                              )
+                                          ),
+                                          SizedBox(width:149.w ,),
+
+                                          Icon(Icons.arrow_forward_ios_outlined, color: Color(0xff2c7754),size: 20.sp,),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding:  EdgeInsets.only(top: 12.h),
+                                        child: SizedBox(width: 358.w,
+                                            child: Divider(thickness: 0.0,)),
+                                      ),
+
+
+                                      //--------------------------- row 4 ----------------------------
+                                      SizedBox(height: 15.h,),
+
+                                      Row(
+                                        children: [
+                                          Icon(Icons.restart_alt_outlined, color: Color(
+                                              0xff96e8c8),),
+                                          SizedBox(width:10.w ,),
+                                          Text(
+                                              "Aepod Sync Settings",
+                                              style: TextStyle(
+                                                fontSize: 16.sp,
+                                                color: Color(0xff06492C),
+                                                fontWeight: FontWeight.w700,
+                                              )
+                                          ),
+                                          SizedBox(width:100.w ,),
+
+                                          Icon(Icons.arrow_forward_ios_outlined, color: Color(0xff2c7754),size: 20.sp,),
+                                        ],
+                                      ),
+
+
+
+
+                                    ],
+                                  ),
+                                ),
+                              )
+
+
+
+
+                           // ),
+                    ])
                         ]),
                       ),
                     )
