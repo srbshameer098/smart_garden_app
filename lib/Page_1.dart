@@ -47,6 +47,58 @@ class _Page_1State extends State<Page_1> {
                   width: 414.w,
                   height: 245.h,
                 ),
+
+                Padding(
+                  padding:  EdgeInsets.only(top: 40.h,left: 24.w),
+                  child: Positioned(height: 40.h,
+                    child: Container(margin: EdgeInsets.all(8.0),
+                      width: 121.w,
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40.r),
+                          color: Colors.white),
+
+                      child: Row(
+                        children: [
+                          SizedBox(width: 10.w,),
+                          Icon(Icons.arrow_back_ios_new_outlined,
+                            size: 16,
+                            color:
+                            Color(0xff1b6833)
+                            ,),
+                          SizedBox(width: 10.w,),
+
+                          Text(
+                              "Go back",
+                              style: TextStyle(
+                                color:  Color(0xff18783b),
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w700,
+                              )
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+
+                Padding(
+                  padding:  EdgeInsets.only(left: 310.w,top: 48.h),
+                  child: Positioned(
+                    width: 220.w,
+                    height: 120.h,
+                    child: CircleAvatar(
+                      radius: 21.r,
+                      backgroundColor: Colors.white,
+                      child:
+                      Icon(Icons.more_horiz,size: 18.sp,
+                          color: Color(0xff06492C)
+                      )
+                    ),
+                  ),
+                )
+
               ]),
               Padding(
                 padding: EdgeInsets.only(top: 4.h, left: 24.w, right: 20.w),
@@ -988,10 +1040,34 @@ SizedBox(height: 15.h,),
                                     ],
                                   ),
                                 ),
-                              )
+                              ),
 
 
+                                  Padding(
+                                    padding:  EdgeInsets.only(left: 130.w,
+                                      top: 170.h,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("assets/logo_1.png",
+                                          width: 15.w,
+                                          height: 15.h,
+                                          color: Colors.grey.shade400,
+                                        ),
+                                        SizedBox(width: 8.w,),
+                                        Text("AEPOD",
+                                          style: TextStyle(
+                                              color: Colors.grey.shade400,
+                                              fontSize: 15.sp,
+                                              fontWeight: FontWeight.w700
 
+                                          ),
+                                        )
+
+
+                                      ],
+                                    ),
+                                  ),
 
                            // ),
                     ])
