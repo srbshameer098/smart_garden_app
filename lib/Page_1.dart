@@ -51,7 +51,14 @@ class _Page_1State extends State<Page_1> {
                 Padding(
                   padding:  EdgeInsets.only(top: 40.h,left: 24.w),
                   child: Positioned(height: 40.h,
-                    child: Container(margin: EdgeInsets.all(8.0),
+                    child:
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context)
+                            .pop();
+                      },
+                      child:
+                    Container(margin: EdgeInsets.all(8.0),
                       width: 121.w,
                       height: 40.h,
                       decoration: BoxDecoration(
@@ -62,7 +69,7 @@ class _Page_1State extends State<Page_1> {
                         children: [
                           SizedBox(width: 10.w,),
                           Icon(Icons.arrow_back_ios_new_outlined,
-                            size: 16,
+                            size: 16.sp,
                             color:
                             Color(0xff1b6833)
                             ,),
@@ -79,6 +86,7 @@ class _Page_1State extends State<Page_1> {
                         ],
                       ),
                     ),
+                    )
                   ),
                 ),
 
@@ -93,7 +101,7 @@ class _Page_1State extends State<Page_1> {
                       backgroundColor: Colors.white,
                       child:
                       Icon(Icons.more_horiz,size: 18.sp,
-                          color: Color(0xff06492C)
+                          color: Color(0xff379a70)
                       )
                     ),
                   ),
