@@ -1025,7 +1025,7 @@ SizedBox(height: 15.h,),
 
                                       Row(
                                         children: [
-                                          Icon(Icons.restart_alt_outlined, color: Color(
+                                          Icon(Icons.sync, color: Color(
                                               0xff96e8c8),),
                                           SizedBox(width:10.w ,),
                                           Text(

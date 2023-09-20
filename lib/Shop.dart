@@ -162,7 +162,7 @@ class _ShopState extends State<Shop> {
                                                   fontWeight: FontWeight.w600,
                                                 )),
                                             CircleAvatar(
-                                              radius: 2,
+                                              radius: 2.r,
                                               backgroundColor:
                                                   Color(0xff06492C),
                                             ),
@@ -193,12 +193,1132 @@ class _ShopState extends State<Shop> {
                                       SizedBox(
                                         height: 20.h,
                                       ),
-                                      Text("Read more",
-                                          style: TextStyle(
-                                            color: Color(0xff166b4b),
-                                            fontSize: 20.sp,
-                                            fontWeight: FontWeight.w700,
-                                          )),
+                                      GestureDetector(
+                                        onTap: (){
+                                          showModalBottomSheet(isScrollControlled: true,
+                                              context: context,
+                                              builder: (context) {
+                                                return Container(
+                                                  height: 896.h,
+                                                  width: 375.w,
+                                                  decoration: BoxDecoration(
+                                                      borderRadius:
+                                                      BorderRadius.circular(32),
+                                                      color: Color(0xffffffff)),
+                                                  child: Padding(
+                                                    padding: EdgeInsets.only(
+                                                        left: 20.w, right: 20),
+                                                    child: SingleChildScrollView(
+                                                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                        children: [
+
+                                                          SizedBox(
+                                                            height: 56.h,
+                                                          ),
+                                                          Padding(
+                                                            padding:  EdgeInsets.only(left: 140.w),
+                                                            child: Image.asset("assets/curve_container.png",
+                                                              width: 64,
+                                                              height: 16,),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 40.h,
+                                                          ),
+
+                                                          Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                            children: [
+                                                              Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: [
+                                                                  SizedBox(height: 20.h,),
+                                                                  Text(name[index],
+                                                                      style: GoogleFonts.bitter(
+                                                                        textStyle: TextStyle(
+                                                                          fontSize: 32.h,
+                                                                          fontWeight:
+                                                                          FontWeight.w600,
+                                                                        ),
+                                                                      )),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Text("Herb ",
+                                                                          style: TextStyle(
+                                                                            color:
+                                                                            Color(0xff166b4b),
+                                                                            fontSize: 21.sp,
+                                                                            fontWeight:
+                                                                            FontWeight.w600,
+                                                                          )),
+
+                                                                      CircleAvatar(
+                                                                        radius: 2.r,
+                                                                        backgroundColor:
+                                                                        Color(0xff166b4b),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        width: 5.w,
+                                                                      ),
+                                                                      Text(price[index],
+                                                                          style: TextStyle(
+                                                                            color:
+                                                                            Color(0xff166b4b),
+                                                                            fontSize: 21.sp,
+                                                                            fontWeight:
+                                                                            FontWeight.w600,
+                                                                          )),
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+                                                                  Text(
+                                                                      "121 people are growing this 🌿",
+                                                                      style: TextStyle(
+                                                                        fontSize: 14.sp,
+                                                                        fontWeight: FontWeight.w400,
+                                                                      )
+                                                                  )
+
+                                                                ],
+                                                              ),
+
+
+                                                              Image.asset(
+                                                                img[index],
+                                                                width: 120.w,
+                                                                height: 120.h,
+                                                              ),
+
+
+                                                            ],
+                                                          ),
+
+                                                          SizedBox(
+                                                            height: 30.h,
+                                                          ),
+                                                          Row(
+                                                            children: [
+                                                              Container(
+                                                                height: 52.h,
+                                                                width: 64.w,
+                                                                decoration: BoxDecoration(
+                                                                    border: Border.all(
+                                                                        color: Color(0xff166b4b),
+                                                                        width: 2),
+                                                                    borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(4),
+                                                                    color:
+                                                                    Color(0xffffffff)),
+                                                                child: Icon(
+                                                                  Icons.favorite_border,
+                                                                  color: Color(0xff166b4b),
+                                                                ),
+                                                              ),
+                                                              SizedBox(
+                                                                width: 10.w,
+                                                              ),
+                                                              Container(
+                                                                  height: 52.h,
+                                                                  width: 250.w,
+                                                                  decoration: BoxDecoration(
+                                                                      borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(4),
+                                                                      color: Color(
+                                                                          0xff166b4b)),
+                                                                  child: Center(
+                                                                    child: Text(
+                                                                        "Add to Cart",
+                                                                        style: TextStyle(
+                                                                          color:
+                                                                          Colors.white,
+                                                                          fontSize: 18.sp,
+                                                                          fontWeight:
+                                                                          FontWeight
+                                                                              .w700,
+                                                                        )),
+                                                                  ))
+                                                            ],
+                                                          ),
+
+                                                          SizedBox(
+                                                            height: 20.h,
+                                                          ),
+
+                                                          Text(
+                                                              "Description",
+                                                              style: TextStyle(
+                                                                color: Colors.grey,
+                                                                fontSize: 16.sp,
+                                                                fontWeight: FontWeight.w700,
+                                                              )
+                                                          ),
+
+
+                                                          SizedBox(
+                                                            height: 20.h,
+                                                          ),
+                                                          Text(
+                                                            "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                            style: GoogleFonts.lato(
+                                                                textStyle: TextStyle(
+                                                                  fontSize: 14.sp,
+                                                                  color: Color(0xBF111111),
+                                                                  fontWeight: FontWeight.w400,
+                                                                )),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 20.h,
+                                                          ),
+                                                          Text(
+                                                              "Growing information",
+                                                              style: TextStyle(
+                                                                fontSize: 16.sp,
+                                                                color: Colors.grey,
+                                                                fontWeight: FontWeight.w700,
+                                                              )
+                                                          ),
+                                                          SizedBox(height: 10.h,),
+
+                                                          Row(
+                                                            children: [
+                                                              Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                              Text(
+                                                                  "Room temparature is fine",
+                                                                  style: TextStyle(
+                                                                    fontSize: 16.sp,
+                                                                    fontWeight: FontWeight.w700,
+                                                                  )
+                                                              )
+                                                            ],
+                                                          ),
+                                                          SizedBox(height: 10.h,),
+
+                                                          Row(
+                                                            children: [
+                                                              Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                              Text(
+                                                                  "Regular watering works best",
+                                                                  style: TextStyle(
+                                                                    fontSize: 16.sp,
+                                                                    fontWeight: FontWeight.w700,
+                                                                  )
+                                                              )
+                                                            ],
+                                                          ),
+                                                          SizedBox(height: 10.h,),
+                                                          Row(
+                                                            children: [
+                                                              Image.asset("assets/plant1.png",
+                                                                width: 24,
+                                                                height: 24,
+                                                                color: Color(0xff96e8c8),
+                                                              ),
+                                                              Text(
+                                                                  "Typically ready for harvest after 4 weeks",
+                                                                  style: TextStyle(
+                                                                    fontSize: 16.sp,
+                                                                    fontWeight: FontWeight.w700,
+                                                                  )
+                                                              )
+                                                            ],
+                                                          ),
+
+                                                          SizedBox(height: 20.h,),
+
+                                                          Text(
+                                                              "Other Herbs",
+                                                              style: TextStyle(
+                                                                color: Colors.grey,
+                                                                fontSize: 16.sp,
+                                                                fontWeight: FontWeight.w700,
+                                                              )
+                                                          ),
+                                                          SizedBox(height: 10.h,),
+
+                                                          SizedBox(
+                                                            width: 600.w,
+                                                            height: 265.h,
+                                                            child: ListView.separated(
+                                                              scrollDirection: Axis.horizontal,
+                                                              padding: const EdgeInsets.all(8),
+                                                              itemCount: img.length,
+                                                              itemBuilder: (BuildContext context, int index) {
+                                                                return GestureDetector(
+                                                                  onTap: () {
+                                                                    showModalBottomSheet(
+                                                                        context: context,
+                                                                        builder: (context) {
+                                                                          return Container(
+                                                                            height: 524.h,
+                                                                            width: 375.w,
+                                                                            decoration: BoxDecoration(
+                                                                                borderRadius: BorderRadius.circular(32),
+                                                                                color: Color(0xffffffff)),
+                                                                            child: Padding(
+                                                                              padding:
+                                                                              EdgeInsets.only(left: 20.w, right: 20),
+                                                                              child: Column(
+                                                                                children: [
+                                                                                  SizedBox(
+                                                                                    height: 16.h,
+                                                                                  ),
+                                                                                  Container(
+                                                                                      width: 48.w,
+                                                                                      height: 8.h,
+                                                                                      decoration: BoxDecoration(
+                                                                                          borderRadius:
+                                                                                          BorderRadius.circular(4.r),
+                                                                                          color: Color(0x3f06492c))),
+                                                                                  SizedBox(
+                                                                                    height: 40.h,
+                                                                                  ),
+                                                                                  Image.asset(
+                                                                                    img[index],
+                                                                                    width: 120.w,
+                                                                                    height: 120.h,
+                                                                                  ),
+                                                                                  Text(name[index],
+                                                                                      style: GoogleFonts.bitter(
+                                                                                        textStyle: TextStyle(
+                                                                                          fontSize: 32.h,
+                                                                                          fontWeight: FontWeight.w600,
+                                                                                        ),
+                                                                                      )),
+                                                                                  Padding(
+                                                                                    padding: EdgeInsets.only(left: 124.w),
+                                                                                    child: Row(
+                                                                                      children: [
+                                                                                        Text("Herb ",
+                                                                                            style: TextStyle(
+                                                                                              color: Color(0xff166b4b),
+                                                                                              fontSize: 21.sp,
+                                                                                              fontWeight: FontWeight.w600,
+                                                                                            )),
+                                                                                        CircleAvatar(
+                                                                                          radius: 2.r,
+                                                                                          backgroundColor:
+                                                                                          Color(0xff06492C),
+                                                                                        ),
+                                                                                        SizedBox(
+                                                                                          width: 5.w,
+                                                                                        ),
+                                                                                        Text(price[index],
+                                                                                            style: TextStyle(
+                                                                                              color: Color(0xff166b4b),
+                                                                                              fontSize: 21.sp,
+                                                                                              fontWeight: FontWeight.w600,
+                                                                                            )),
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                  SizedBox(
+                                                                                    height: 20.h,
+                                                                                  ),
+                                                                                  Text(
+                                                                                    "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                    style: GoogleFonts.lato(
+                                                                                        textStyle: TextStyle(
+                                                                                          fontSize: 14.sp,
+                                                                                          color: Color(0xBF111111),
+                                                                                          fontWeight: FontWeight.w400,
+                                                                                        )),
+                                                                                  ),
+                                                                                  SizedBox(
+                                                                                    height: 20.h,
+                                                                                  ),
+                                                                                  GestureDetector(
+                                                                                    onTap: (){
+                                                                                      showModalBottomSheet(isScrollControlled: true,
+                                                                                          context: context,
+                                                                                          builder: (context) {
+                                                                                            return Container(
+                                                                                              height: 896.h,
+                                                                                              width: 375.w,
+                                                                                              decoration: BoxDecoration(
+                                                                                                  borderRadius:
+                                                                                                  BorderRadius.circular(32),
+                                                                                                  color: Color(0xffffffff)),
+                                                                                              child: Padding(
+                                                                                                padding: EdgeInsets.only(
+                                                                                                    left: 20.w, right: 20),
+                                                                                                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                  children: [
+
+                                                                                                    SizedBox(
+                                                                                                      height: 56.h,
+                                                                                                    ),
+                                                                                                    Padding(
+                                                                                                      padding:  EdgeInsets.only(left: 140.w),
+                                                                                                      child: Image.asset("assets/curve_container.png",
+                                                                                                        width: 64,
+                                                                                                        height: 16,),
+                                                                                                    ),
+                                                                                                    SizedBox(
+                                                                                                      height: 40.h,
+                                                                                                    ),
+
+                                                                                                    Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                      children: [
+                                                                                                        Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                          children: [
+                                                                                                            SizedBox(height: 20.h,),
+                                                                                                            Text(name[index],
+                                                                                                                style: GoogleFonts.bitter(
+                                                                                                                  textStyle: TextStyle(
+                                                                                                                    fontSize: 32.h,
+                                                                                                                    fontWeight:
+                                                                                                                    FontWeight.w600,
+                                                                                                                  ),
+                                                                                                                )),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Text("Herb ",
+                                                                                                                    style: TextStyle(
+                                                                                                                      color:
+                                                                                                                      Color(0xff166b4b),
+                                                                                                                      fontSize: 21.sp,
+                                                                                                                      fontWeight:
+                                                                                                                      FontWeight.w600,
+                                                                                                                    )),
+
+                                                                                                                CircleAvatar(
+                                                                                                                  radius: 2.r,
+                                                                                                                  backgroundColor:
+                                                                                                                  Color(0xff166b4b),
+                                                                                                                ),
+                                                                                                                SizedBox(
+                                                                                                                  width: 5.w,
+                                                                                                                ),
+                                                                                                                Text(price[index],
+                                                                                                                    style: TextStyle(
+                                                                                                                      color:
+                                                                                                                      Color(0xff166b4b),
+                                                                                                                      fontSize: 21.sp,
+                                                                                                                      fontWeight:
+                                                                                                                      FontWeight.w600,
+                                                                                                                    )),
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+                                                                                                            Text(
+                                                                                                                "121 people are growing this 🌿",
+                                                                                                                style: TextStyle(
+                                                                                                                  fontSize: 14.sp,
+                                                                                                                  fontWeight: FontWeight.w400,
+                                                                                                                )
+                                                                                                            )
+
+                                                                                                          ],
+                                                                                                        ),
+
+
+                                                                                                        Image.asset(
+                                                                                                          img[index],
+                                                                                                          width: 120.w,
+                                                                                                          height: 120.h,
+                                                                                                        ),
+
+
+                                                                                                      ],
+                                                                                                    ),
+
+                                                                                                    SizedBox(
+                                                                                                      height: 30.h,
+                                                                                                    ),
+                                                                                                    Row(
+                                                                                                      children: [
+                                                                                                        Container(
+                                                                                                          height: 52.h,
+                                                                                                          width: 64.w,
+                                                                                                          decoration: BoxDecoration(
+                                                                                                              border: Border.all(
+                                                                                                                  color: Color(0xff166b4b),
+                                                                                                                  width: 2),
+                                                                                                              borderRadius:
+                                                                                                              BorderRadius
+                                                                                                                  .circular(4),
+                                                                                                              color:
+                                                                                                              Color(0xffffffff)),
+                                                                                                          child: Icon(
+                                                                                                            Icons.favorite_border,
+                                                                                                            color: Color(0xff166b4b),
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                        SizedBox(
+                                                                                                          width: 10.w,
+                                                                                                        ),
+                                                                                                        Container(
+                                                                                                            height: 52.h,
+                                                                                                            width: 250.w,
+                                                                                                            decoration: BoxDecoration(
+                                                                                                                borderRadius:
+                                                                                                                BorderRadius
+                                                                                                                    .circular(4),
+                                                                                                                color: Color(
+                                                                                                                    0xff166b4b)),
+                                                                                                            child: Center(
+                                                                                                              child: Text(
+                                                                                                                  "Add to Cart",
+                                                                                                                  style: TextStyle(
+                                                                                                                    color:
+                                                                                                                    Colors.white,
+                                                                                                                    fontSize: 18.sp,
+                                                                                                                    fontWeight:
+                                                                                                                    FontWeight
+                                                                                                                        .w700,
+                                                                                                                  )),
+                                                                                                            ))
+                                                                                                      ],
+                                                                                                    ),
+
+                                                                                                    SizedBox(
+                                                                                                      height: 20.h,
+                                                                                                    ),
+
+                                                                                                    Text(
+                                                                                                        "Description",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.grey,
+                                                                                                          fontSize: 16.sp,
+                                                                                                          fontWeight: FontWeight.w700,
+                                                                                                        )
+                                                                                                    ),
+
+
+                                                                                                    SizedBox(
+                                                                                                      height: 20.h,
+                                                                                                    ),
+                                                                                                    Text(
+                                                                                                      "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                      style: GoogleFonts.lato(
+                                                                                                          textStyle: TextStyle(
+                                                                                                            fontSize: 14.sp,
+                                                                                                            color: Color(0xBF111111),
+                                                                                                            fontWeight: FontWeight.w400,
+                                                                                                          )),
+                                                                                                    ),
+                                                                                                    SizedBox(
+                                                                                                      height: 20.h,
+                                                                                                    ),
+                                                                                                    Text(
+                                                                                                        "Growing information",
+                                                                                                        style: TextStyle(
+                                                                                                          fontSize: 16.sp,
+                                                                                                          color: Colors.grey,
+                                                                                                          fontWeight: FontWeight.w700,
+                                                                                                        )
+                                                                                                    ),
+                                                                                                    SizedBox(height: 10.h,),
+
+                                                                                                    Row(
+                                                                                                      children: [
+                                                                                                        Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                        Text(
+                                                                                                            "Room temparature is fine",
+                                                                                                            style: TextStyle(
+                                                                                                              fontSize: 16.sp,
+                                                                                                              fontWeight: FontWeight.w700,
+                                                                                                            )
+                                                                                                        )
+                                                                                                      ],
+                                                                                                    ),
+                                                                                                    SizedBox(height: 10.h,),
+
+                                                                                                    Row(
+                                                                                                      children: [
+                                                                                                        Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                        Text(
+                                                                                                            "Regular watering works best",
+                                                                                                            style: TextStyle(
+                                                                                                              fontSize: 16.sp,
+                                                                                                              fontWeight: FontWeight.w700,
+                                                                                                            )
+                                                                                                        )
+                                                                                                      ],
+                                                                                                    ),
+                                                                                                    SizedBox(height: 10.h,),
+                                                                                                    Row(
+                                                                                                      children: [
+                                                                                                        Image.asset("assets/plant1.png",
+                                                                                                          width: 24,
+                                                                                                          height: 24,
+                                                                                                          color: Color(0xff96e8c8),
+                                                                                                        ),
+                                                                                                        Text(
+                                                                                                            "Typically ready for harvest after 4 weeks",
+                                                                                                            style: TextStyle(
+                                                                                                              fontSize: 16.sp,
+                                                                                                              fontWeight: FontWeight.w700,
+                                                                                                            )
+                                                                                                        )
+                                                                                                      ],
+                                                                                                    ),
+
+                                                                                                    SizedBox(height: 20.h,),
+
+                                                                                                    Text(
+                                                                                                        "Other Herbs",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.grey,
+                                                                                                          fontSize: 16.sp,
+                                                                                                          fontWeight: FontWeight.w700,
+                                                                                                        )
+                                                                                                    ),
+
+                                                                                                    SizedBox(
+                                                                                                      width: 600.w,
+                                                                                                      height: 265.h,
+                                                                                                      child: ListView.separated(
+                                                                                                        scrollDirection: Axis.horizontal,
+                                                                                                        padding: const EdgeInsets.all(8),
+                                                                                                        itemCount: img.length,
+                                                                                                        itemBuilder: (BuildContext context, int index) {
+                                                                                                          return GestureDetector(
+                                                                                                            onTap: () {
+                                                                                                              showModalBottomSheet(
+                                                                                                                  context: context,
+                                                                                                                  builder: (context) {
+                                                                                                                    return Container(
+                                                                                                                      height: 524.h,
+                                                                                                                      width: 375.w,
+                                                                                                                      decoration: BoxDecoration(
+                                                                                                                          borderRadius: BorderRadius.circular(32),
+                                                                                                                          color: Color(0xffffffff)),
+                                                                                                                      child: Padding(
+                                                                                                                        padding:
+                                                                                                                        EdgeInsets.only(left: 20.w, right: 20),
+                                                                                                                        child: Column(
+                                                                                                                          children: [
+                                                                                                                            SizedBox(
+                                                                                                                              height: 16.h,
+                                                                                                                            ),
+                                                                                                                            Container(
+                                                                                                                                width: 48.w,
+                                                                                                                                height: 8.h,
+                                                                                                                                decoration: BoxDecoration(
+                                                                                                                                    borderRadius:
+                                                                                                                                    BorderRadius.circular(4.r),
+                                                                                                                                    color: Color(0x3f06492c))),
+                                                                                                                            SizedBox(
+                                                                                                                              height: 40.h,
+                                                                                                                            ),
+                                                                                                                            Image.asset(
+                                                                                                                              img[index],
+                                                                                                                              width: 120.w,
+                                                                                                                              height: 120.h,
+                                                                                                                            ),
+                                                                                                                            Text(name[index],
+                                                                                                                                style: GoogleFonts.bitter(
+                                                                                                                                  textStyle: TextStyle(
+                                                                                                                                    fontSize: 32.h,
+                                                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                                                  ),
+                                                                                                                                )),
+                                                                                                                            Padding(
+                                                                                                                              padding: EdgeInsets.only(left: 124.w),
+                                                                                                                              child: Row(
+                                                                                                                                children: [
+                                                                                                                                  Text("Herb ",
+                                                                                                                                      style: TextStyle(
+                                                                                                                                        color: Color(0xff166b4b),
+                                                                                                                                        fontSize: 21.sp,
+                                                                                                                                        fontWeight: FontWeight.w600,
+                                                                                                                                      )),
+                                                                                                                                  CircleAvatar(
+                                                                                                                                    radius: 2.r,
+                                                                                                                                    backgroundColor:
+                                                                                                                                    Color(0xff06492C),
+                                                                                                                                  ),
+                                                                                                                                  SizedBox(
+                                                                                                                                    width: 5.w,
+                                                                                                                                  ),
+                                                                                                                                  Text(price[index],
+                                                                                                                                      style: TextStyle(
+                                                                                                                                        color: Color(0xff166b4b),
+                                                                                                                                        fontSize: 21.sp,
+                                                                                                                                        fontWeight: FontWeight.w600,
+                                                                                                                                      )),
+                                                                                                                                ],
+                                                                                                                              ),
+                                                                                                                            ),
+                                                                                                                            SizedBox(
+                                                                                                                              height: 20.h,
+                                                                                                                            ),
+                                                                                                                            Text(
+                                                                                                                              "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                                                              style: GoogleFonts.lato(
+                                                                                                                                  textStyle: TextStyle(
+                                                                                                                                    fontSize: 14.sp,
+                                                                                                                                    color: Color(0xBF111111),
+                                                                                                                                    fontWeight: FontWeight.w400,
+                                                                                                                                  )),
+                                                                                                                            ),
+                                                                                                                            SizedBox(
+                                                                                                                              height: 20.h,
+                                                                                                                            ),
+                                                                                                                            GestureDetector(
+                                                                                                                              onTap: (){
+                                                                                                                                showModalBottomSheet(isScrollControlled: true,
+                                                                                                                                    context: context,
+                                                                                                                                    builder: (context) {
+                                                                                                                                      return Container(
+                                                                                                                                        height: 896.h,
+                                                                                                                                        width: 375.w,
+                                                                                                                                        decoration: BoxDecoration(
+                                                                                                                                            borderRadius:
+                                                                                                                                            BorderRadius.circular(32),
+                                                                                                                                            color: Color(0xffffffff)),
+                                                                                                                                        child: Padding(
+                                                                                                                                          padding: EdgeInsets.only(
+                                                                                                                                              left: 20.w, right: 20),
+                                                                                                                                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                                            children: [
+
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 56.h,
+                                                                                                                                              ),
+                                                                                                                                              Padding(
+                                                                                                                                                padding:  EdgeInsets.only(left: 140.w),
+                                                                                                                                                child: Image.asset("assets/curve_container.png",
+                                                                                                                                                  width: 64,
+                                                                                                                                                  height: 16,),
+                                                                                                                                              ),
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 40.h,
+                                                                                                                                              ),
+
+                                                                                                                                              Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                                                children: [
+                                                                                                                                                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                                                    children: [
+                                                                                                                                                      SizedBox(height: 20.h,),
+                                                                                                                                                      Text(name[index],
+                                                                                                                                                          style: GoogleFonts.bitter(
+                                                                                                                                                            textStyle: TextStyle(
+                                                                                                                                                              fontSize: 32.h,
+                                                                                                                                                              fontWeight:
+                                                                                                                                                              FontWeight.w600,
+                                                                                                                                                            ),
+                                                                                                                                                          )),
+
+                                                                                                                                                      Row(
+                                                                                                                                                        children: [
+                                                                                                                                                          Text("Herb ",
+                                                                                                                                                              style: TextStyle(
+                                                                                                                                                                color:
+                                                                                                                                                                Color(0xff166b4b),
+                                                                                                                                                                fontSize: 21.sp,
+                                                                                                                                                                fontWeight:
+                                                                                                                                                                FontWeight.w600,
+                                                                                                                                                              )),
+
+                                                                                                                                                          CircleAvatar(
+                                                                                                                                                            radius: 2.r,
+                                                                                                                                                            backgroundColor:
+                                                                                                                                                            Color(0xff166b4b),
+                                                                                                                                                          ),
+                                                                                                                                                          SizedBox(
+                                                                                                                                                            width: 5.w,
+                                                                                                                                                          ),
+                                                                                                                                                          Text(price[index],
+                                                                                                                                                              style: TextStyle(
+                                                                                                                                                                color:
+                                                                                                                                                                Color(0xff166b4b),
+                                                                                                                                                                fontSize: 21.sp,
+                                                                                                                                                                fontWeight:
+                                                                                                                                                                FontWeight.w600,
+                                                                                                                                                              )),
+                                                                                                                                                        ],
+                                                                                                                                                      ),
+                                                                                                                                                      SizedBox(height: 10.h,),
+                                                                                                                                                      Text(
+                                                                                                                                                          "121 people are growing this 🌿",
+                                                                                                                                                          style: TextStyle(
+                                                                                                                                                            fontSize: 14.sp,
+                                                                                                                                                            fontWeight: FontWeight.w400,
+                                                                                                                                                          )
+                                                                                                                                                      )
+
+                                                                                                                                                    ],
+                                                                                                                                                  ),
+
+
+                                                                                                                                                  Image.asset(
+                                                                                                                                                    img[index],
+                                                                                                                                                    width: 120.w,
+                                                                                                                                                    height: 120.h,
+                                                                                                                                                  ),
+
+
+                                                                                                                                                ],
+                                                                                                                                              ),
+
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 30.h,
+                                                                                                                                              ),
+                                                                                                                                              Row(
+                                                                                                                                                children: [
+                                                                                                                                                  Container(
+                                                                                                                                                    height: 52.h,
+                                                                                                                                                    width: 64.w,
+                                                                                                                                                    decoration: BoxDecoration(
+                                                                                                                                                        border: Border.all(
+                                                                                                                                                            color: Color(0xff166b4b),
+                                                                                                                                                            width: 2),
+                                                                                                                                                        borderRadius:
+                                                                                                                                                        BorderRadius
+                                                                                                                                                            .circular(4),
+                                                                                                                                                        color:
+                                                                                                                                                        Color(0xffffffff)),
+                                                                                                                                                    child: Icon(
+                                                                                                                                                      Icons.favorite_border,
+                                                                                                                                                      color: Color(0xff166b4b),
+                                                                                                                                                    ),
+                                                                                                                                                  ),
+                                                                                                                                                  SizedBox(
+                                                                                                                                                    width: 10.w,
+                                                                                                                                                  ),
+                                                                                                                                                  Container(
+                                                                                                                                                      height: 52.h,
+                                                                                                                                                      width: 250.w,
+                                                                                                                                                      decoration: BoxDecoration(
+                                                                                                                                                          borderRadius:
+                                                                                                                                                          BorderRadius
+                                                                                                                                                              .circular(4),
+                                                                                                                                                          color: Color(
+                                                                                                                                                              0xff166b4b)),
+                                                                                                                                                      child: Center(
+                                                                                                                                                        child: Text(
+                                                                                                                                                            "Add to Cart",
+                                                                                                                                                            style: TextStyle(
+                                                                                                                                                              color:
+                                                                                                                                                              Colors.white,
+                                                                                                                                                              fontSize: 18.sp,
+                                                                                                                                                              fontWeight:
+                                                                                                                                                              FontWeight
+                                                                                                                                                                  .w700,
+                                                                                                                                                            )),
+                                                                                                                                                      ))
+                                                                                                                                                ],
+                                                                                                                                              ),
+
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 20.h,
+                                                                                                                                              ),
+
+                                                                                                                                              Text(
+                                                                                                                                                  "Description",
+                                                                                                                                                  style: TextStyle(
+                                                                                                                                                    color: Colors.grey,
+                                                                                                                                                    fontSize: 16.sp,
+                                                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                                                  )
+                                                                                                                                              ),
+
+
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 20.h,
+                                                                                                                                              ),
+                                                                                                                                              Text(
+                                                                                                                                                "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                                                                style: GoogleFonts.lato(
+                                                                                                                                                    textStyle: TextStyle(
+                                                                                                                                                      fontSize: 14.sp,
+                                                                                                                                                      color: Color(0xBF111111),
+                                                                                                                                                      fontWeight: FontWeight.w400,
+                                                                                                                                                    )),
+                                                                                                                                              ),
+                                                                                                                                              SizedBox(
+                                                                                                                                                height: 20.h,
+                                                                                                                                              ),
+                                                                                                                                              Text(
+                                                                                                                                                  "Growing information",
+                                                                                                                                                  style: TextStyle(
+                                                                                                                                                    fontSize: 16.sp,
+                                                                                                                                                    color: Colors.grey,
+                                                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                                                  )
+                                                                                                                                              ),
+                                                                                                                                              SizedBox(height: 10.h,),
+
+                                                                                                                                              Row(
+                                                                                                                                                children: [
+                                                                                                                                                  Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                                                                  Text(
+                                                                                                                                                      "Room temparature is fine",
+                                                                                                                                                      style: TextStyle(
+                                                                                                                                                        fontSize: 16.sp,
+                                                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                                                      )
+                                                                                                                                                  )
+                                                                                                                                                ],
+                                                                                                                                              ),
+                                                                                                                                              SizedBox(height: 10.h,),
+
+                                                                                                                                              Row(
+                                                                                                                                                children: [
+                                                                                                                                                  Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                                                                  Text(
+                                                                                                                                                      "Regular watering works best",
+                                                                                                                                                      style: TextStyle(
+                                                                                                                                                        fontSize: 16.sp,
+                                                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                                                      )
+                                                                                                                                                  )
+                                                                                                                                                ],
+                                                                                                                                              ),
+                                                                                                                                              SizedBox(height: 10.h,),
+                                                                                                                                              Row(
+                                                                                                                                                children: [
+                                                                                                                                                  Image.asset("assets/plant1.png",
+                                                                                                                                                    width: 24,
+                                                                                                                                                    height: 24,
+                                                                                                                                                    color: Color(0xff96e8c8),
+                                                                                                                                                  ),
+                                                                                                                                                  Text(
+                                                                                                                                                      "Typically ready for harvest after 4 weeks",
+                                                                                                                                                      style: TextStyle(
+                                                                                                                                                        fontSize: 16.sp,
+                                                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                                                      )
+                                                                                                                                                  )
+                                                                                                                                                ],
+                                                                                                                                              ),
+
+                                                                                                                                              SizedBox(height: 20.h,),
+
+                                                                                                                                              Text(
+                                                                                                                                                  "Other Herbs",
+                                                                                                                                                  style: TextStyle(
+                                                                                                                                                    color: Colors.grey,
+                                                                                                                                                    fontSize: 16.sp,
+                                                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                                                  )
+                                                                                                                                              )
+
+
+                                                                                                                                            ],
+                                                                                                                                          ),
+                                                                                                                                        ),
+                                                                                                                                      );
+                                                                                                                                    });
+                                                                                                                              },
+                                                                                                                              child: Text("Read more",
+                                                                                                                                  style: TextStyle(
+                                                                                                                                    color: Color(0xff166b4b),
+                                                                                                                                    fontSize: 20.sp,
+                                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                                  )),
+                                                                                                                            ),
+                                                                                                                            SizedBox(
+                                                                                                                              height: 30.h,
+                                                                                                                            ),
+                                                                                                                            Row(
+                                                                                                                              children: [
+                                                                                                                                Container(
+                                                                                                                                  height: 52.h,
+                                                                                                                                  width: 64.w,
+                                                                                                                                  decoration: BoxDecoration(
+                                                                                                                                      border: Border.all(
+                                                                                                                                          color: Color(0xff166b4b),
+                                                                                                                                          width: 2),
+                                                                                                                                      borderRadius:
+                                                                                                                                      BorderRadius.circular(4),
+                                                                                                                                      color: Color(0xffffffff)),
+                                                                                                                                  child: Icon(
+                                                                                                                                    Icons.favorite_border,
+                                                                                                                                    color: Color(0xff166b4b),
+                                                                                                                                  ),
+                                                                                                                                ),
+                                                                                                                                SizedBox(
+                                                                                                                                  width: 10.w,
+                                                                                                                                ),
+                                                                                                                                Container(
+                                                                                                                                    height: 52.h,
+                                                                                                                                    width: 250.w,
+                                                                                                                                    decoration: BoxDecoration(
+                                                                                                                                        borderRadius:
+                                                                                                                                        BorderRadius.circular(4),
+                                                                                                                                        color: Color(0xff166b4b)),
+                                                                                                                                    child: Center(
+                                                                                                                                      child: Text("Add to Cart",
+                                                                                                                                          style: TextStyle(
+                                                                                                                                            color: Colors.white,
+                                                                                                                                            fontSize: 18.sp,
+                                                                                                                                            fontWeight:
+                                                                                                                                            FontWeight.w700,
+                                                                                                                                          )),
+                                                                                                                                    ))
+                                                                                                                              ],
+                                                                                                                            )
+                                                                                                                          ],
+                                                                                                                        ),
+                                                                                                                      ),
+                                                                                                                    );
+                                                                                                                  });
+                                                                                                            },
+                                                                                                            child: Container(
+                                                                                                              width: 177.w,
+                                                                                                              height: 260.h,
+                                                                                                              decoration: BoxDecoration(
+                                                                                                                  borderRadius: BorderRadius.circular(12),
+                                                                                                                  color: Colors.white),
+                                                                                                              child: Column(
+                                                                                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                                children: [
+                                                                                                                  Image.asset(
+                                                                                                                    img[index],
+                                                                                                                    width: 177.w,
+                                                                                                                    height: 177.h,
+                                                                                                                  ),
+                                                                                                                  SizedBox(
+                                                                                                                    height: 10.h,
+                                                                                                                  ),
+                                                                                                                  Text(name[index],
+                                                                                                                      style: TextStyle(
+                                                                                                                        fontSize: 21.sp,
+                                                                                                                        fontWeight: FontWeight.w600,
+                                                                                                                      )),
+                                                                                                                  SizedBox(
+                                                                                                                    height: 10.h,
+                                                                                                                  ),
+                                                                                                                  Text(price[index],
+                                                                                                                      style: TextStyle(
+                                                                                                                        fontSize: 14.sp,
+                                                                                                                        fontWeight: FontWeight.w400,
+                                                                                                                      ))
+                                                                                                                ],
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          );
+                                                                                                        },
+                                                                                                        separatorBuilder: (BuildContext context, int index) {
+                                                                                                          return SizedBox(
+                                                                                                            width: 12.w,
+                                                                                                          );
+                                                                                                        },
+                                                                                                      ),
+                                                                                                    ),
+
+                                                                                                  ],
+                                                                                                ),
+                                                                                              ),
+                                                                                            );
+                                                                                          });
+                                                                                    },
+                                                                                    child: Text("Read more",
+                                                                                        style: TextStyle(
+                                                                                          color: Color(0xff166b4b),
+                                                                                          fontSize: 20.sp,
+                                                                                          fontWeight: FontWeight.w700,
+                                                                                        )),
+                                                                                  ),
+                                                                                  SizedBox(
+                                                                                    height: 30.h,
+                                                                                  ),
+                                                                                  Row(
+                                                                                    children: [
+                                                                                      Container(
+                                                                                        height: 52.h,
+                                                                                        width: 64.w,
+                                                                                        decoration: BoxDecoration(
+                                                                                            border: Border.all(
+                                                                                                color: Color(0xff166b4b),
+                                                                                                width: 2),
+                                                                                            borderRadius:
+                                                                                            BorderRadius.circular(4),
+                                                                                            color: Color(0xffffffff)),
+                                                                                        child: Icon(
+                                                                                          Icons.favorite_border,
+                                                                                          color: Color(0xff166b4b),
+                                                                                        ),
+                                                                                      ),
+                                                                                      SizedBox(
+                                                                                        width: 10.w,
+                                                                                      ),
+                                                                                      Container(
+                                                                                          height: 52.h,
+                                                                                          width: 250.w,
+                                                                                          decoration: BoxDecoration(
+                                                                                              borderRadius:
+                                                                                              BorderRadius.circular(4),
+                                                                                              color: Color(0xff166b4b)),
+                                                                                          child: Center(
+                                                                                            child: Text("Add to Cart",
+                                                                                                style: TextStyle(
+                                                                                                  color: Colors.white,
+                                                                                                  fontSize: 18.sp,
+                                                                                                  fontWeight:
+                                                                                                  FontWeight.w700,
+                                                                                                )),
+                                                                                          ))
+                                                                                    ],
+                                                                                  )
+                                                                                ],
+                                                                              ),
+                                                                            ),
+                                                                          );
+                                                                        });
+                                                                  },
+                                                                  child: Container(
+                                                                    width: 177.w,
+                                                                    height: 260.h,
+                                                                    decoration: BoxDecoration(
+                                                                        borderRadius: BorderRadius.circular(12),
+                                                                        color: Colors.white),
+                                                                    child: Column(
+                                                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                                                      children: [
+                                                                        Image.asset(
+                                                                          img[index],
+                                                                          width: 177.w,
+                                                                          height: 177.h,
+                                                                        ),
+                                                                        SizedBox(
+                                                                          height: 10.h,
+                                                                        ),
+                                                                        Text(name[index],
+                                                                            style: TextStyle(
+                                                                              fontSize: 21.sp,
+                                                                              fontWeight: FontWeight.w600,
+                                                                            )),
+                                                                        SizedBox(
+                                                                          height: 10.h,
+                                                                        ),
+                                                                        Text(price[index],
+                                                                            style: TextStyle(
+                                                                              fontSize: 14.sp,
+                                                                              fontWeight: FontWeight.w400,
+                                                                            ))
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                );
+                                                              },
+                                                              separatorBuilder: (BuildContext context, int index) {
+                                                                return SizedBox(
+                                                                  width: 12.w,
+                                                                );
+                                                              },
+                                                            ),
+                                                          ),
+
+
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                );
+                                              });
+                                        },
+                                        child: Text("Read more",
+                                            style: TextStyle(
+                                              color: Color(0xff166b4b),
+                                              fontSize: 20.sp,
+                                              fontWeight: FontWeight.w700,
+                                            )),
+                                      ),
                                       SizedBox(
                                         height: 30.h,
                                       ),
@@ -427,7 +1547,7 @@ class _ShopState extends State<Shop> {
                                                               FontWeight.w600,
                                                         )),
                                                     CircleAvatar(
-                                                      radius: 2,
+                                                      radius: 2.r,
                                                       backgroundColor:
                                                           Color(0xff06492C),
                                                     ),
@@ -460,12 +1580,696 @@ class _ShopState extends State<Shop> {
                                               SizedBox(
                                                 height: 20.h,
                                               ),
-                                              Text("Read more",
-                                                  style: TextStyle(
-                                                    color: Color(0xff166b4b),
-                                                    fontSize: 20.sp,
-                                                    fontWeight: FontWeight.w700,
-                                                  )),
+                                              GestureDetector(
+                                                onTap: (){
+                                                  showModalBottomSheet(isScrollControlled: true,
+                                                      context: context,
+                                                      builder: (context) {
+                                                        return Container(
+                                                          height: 896.h,
+                                                          width: 375.w,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius.circular(32),
+                                                              color: Color(0xffffffff)),
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: 20.w, right: 20),
+                                                            child: SingleChildScrollView(
+                                                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: [
+
+                                                                  SizedBox(
+                                                                    height: 56.h,
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:  EdgeInsets.only(left: 140.w),
+                                                                    child: Image.asset("assets/curve_container.png",
+                                                                      width: 64,
+                                                                      height: 16,),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 40.h,
+                                                                  ),
+
+                                                                  Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                    children: [
+                                                                      Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          SizedBox(height: 20.h,),
+                                                                          Text(name[index],
+                                                                              style: GoogleFonts.bitter(
+                                                                                textStyle: TextStyle(
+                                                                                  fontSize: 32.h,
+                                                                                  fontWeight:
+                                                                                  FontWeight.w600,
+                                                                                ),
+                                                                              )),
+
+                                                                          Row(
+                                                                            children: [
+                                                                              Text("Herb ",
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+
+                                                                              CircleAvatar(
+                                                                                radius: 2.r,
+                                                                                backgroundColor:
+                                                                                Color(0xff166b4b),
+                                                                              ),
+                                                                              SizedBox(
+                                                                                width: 5.w,
+                                                                              ),
+                                                                              Text(price[index],
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+                                                                            ],
+                                                                          ),
+                                                                          SizedBox(height: 10.h,),
+                                                                          Text(
+                                                                              "121 people are growing this 🌿",
+                                                                              style: TextStyle(
+                                                                                fontSize: 14.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              )
+                                                                          )
+
+                                                                        ],
+                                                                      ),
+
+
+                                                                      Image.asset(
+                                                                        img[index],
+                                                                        width: 120.w,
+                                                                        height: 120.h,
+                                                                      ),
+
+
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 30.h,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Container(
+                                                                        height: 52.h,
+                                                                        width: 64.w,
+                                                                        decoration: BoxDecoration(
+                                                                            border: Border.all(
+                                                                                color: Color(0xff166b4b),
+                                                                                width: 2),
+                                                                            borderRadius:
+                                                                            BorderRadius
+                                                                                .circular(4),
+                                                                            color:
+                                                                            Color(0xffffffff)),
+                                                                        child: Icon(
+                                                                          Icons.favorite_border,
+                                                                          color: Color(0xff166b4b),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        width: 10.w,
+                                                                      ),
+                                                                      Container(
+                                                                          height: 52.h,
+                                                                          width: 250.w,
+                                                                          decoration: BoxDecoration(
+                                                                              borderRadius:
+                                                                              BorderRadius
+                                                                                  .circular(4),
+                                                                              color: Color(
+                                                                                  0xff166b4b)),
+                                                                          child: Center(
+                                                                            child: Text(
+                                                                                "Add to Cart",
+                                                                                style: TextStyle(
+                                                                                  color:
+                                                                                  Colors.white,
+                                                                                  fontSize: 18.sp,
+                                                                                  fontWeight:
+                                                                                  FontWeight
+                                                                                      .w700,
+                                                                                )),
+                                                                          ))
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+
+                                                                  Text(
+                                                                      "Description",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                    "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                    style: GoogleFonts.lato(
+                                                                        textStyle: TextStyle(
+                                                                          fontSize: 14.sp,
+                                                                          color: Color(0xBF111111),
+                                                                          fontWeight: FontWeight.w400,
+                                                                        )),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                      "Growing information",
+                                                                      style: TextStyle(
+                                                                        fontSize: 16.sp,
+                                                                        color: Colors.grey,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Room temparature is fine",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Regular watering works best",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+                                                                  Row(
+                                                                    children: [
+                                                                      Image.asset("assets/plant1.png",
+                                                                        width: 24,
+                                                                        height: 24,
+                                                                        color: Color(0xff96e8c8),
+                                                                      ),
+                                                                      Text(
+                                                                          "Typically ready for harvest after 4 weeks",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(height: 20.h,),
+
+                                                                  Text(
+                                                                      "Other Herbs",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    width: 600.w,
+                                                                    height: 265.h,
+                                                                    child: ListView.separated(
+                                                                      scrollDirection: Axis.horizontal,
+                                                                      padding: const EdgeInsets.all(8),
+                                                                      itemCount: img.length,
+                                                                      itemBuilder: (BuildContext context, int index) {
+                                                                        return GestureDetector(
+                                                                          onTap: () {
+                                                                            showModalBottomSheet(
+                                                                                context: context,
+                                                                                builder: (context) {
+                                                                                  return Container(
+                                                                                    height: 524.h,
+                                                                                    width: 375.w,
+                                                                                    decoration: BoxDecoration(
+                                                                                        borderRadius: BorderRadius.circular(32),
+                                                                                        color: Color(0xffffffff)),
+                                                                                    child: Padding(
+                                                                                      padding:
+                                                                                      EdgeInsets.only(left: 20.w, right: 20),
+                                                                                      child: Column(
+                                                                                        children: [
+                                                                                          SizedBox(
+                                                                                            height: 16.h,
+                                                                                          ),
+                                                                                          Container(
+                                                                                              width: 48.w,
+                                                                                              height: 8.h,
+                                                                                              decoration: BoxDecoration(
+                                                                                                  borderRadius:
+                                                                                                  BorderRadius.circular(4.r),
+                                                                                                  color: Color(0x3f06492c))),
+                                                                                          SizedBox(
+                                                                                            height: 40.h,
+                                                                                          ),
+                                                                                          Image.asset(
+                                                                                            img[index],
+                                                                                            width: 120.w,
+                                                                                            height: 120.h,
+                                                                                          ),
+                                                                                          Text(name[index],
+                                                                                              style: GoogleFonts.bitter(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 32.h,
+                                                                                                  fontWeight: FontWeight.w600,
+                                                                                                ),
+                                                                                              )),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsets.only(left: 124.w),
+                                                                                            child: Row(
+                                                                                              children: [
+                                                                                                Text("Herb ",
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                                CircleAvatar(
+                                                                                                  radius: 2.r,
+                                                                                                  backgroundColor:
+                                                                                                  Color(0xff06492C),
+                                                                                                ),
+                                                                                                SizedBox(
+                                                                                                  width: 5.w,
+                                                                                                ),
+                                                                                                Text(price[index],
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                              ],
+                                                                                            ),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          Text(
+                                                                                            "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                            style: GoogleFonts.lato(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 14.sp,
+                                                                                                  color: Color(0xBF111111),
+                                                                                                  fontWeight: FontWeight.w400,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          GestureDetector(
+                                                                                            onTap: (){
+                                                                                              showModalBottomSheet(isScrollControlled: true,
+                                                                                                  context: context,
+                                                                                                  builder: (context) {
+                                                                                                    return Container(
+                                                                                                      height: 896.h,
+                                                                                                      width: 375.w,
+                                                                                                      decoration: BoxDecoration(
+                                                                                                          borderRadius:
+                                                                                                          BorderRadius.circular(32),
+                                                                                                          color: Color(0xffffffff)),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsets.only(
+                                                                                                            left: 20.w, right: 20),
+                                                                                                        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                          children: [
+
+                                                                                                            SizedBox(
+                                                                                                              height: 56.h,
+                                                                                                            ),
+                                                                                                            Padding(
+                                                                                                              padding:  EdgeInsets.only(left: 140.w),
+                                                                                                              child: Image.asset("assets/curve_container.png",
+                                                                                                                width: 64,
+                                                                                                                height: 16,),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 40.h,
+                                                                                                            ),
+
+                                                                                                            Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                              children: [
+                                                                                                                Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                  children: [
+                                                                                                                    SizedBox(height: 20.h,),
+                                                                                                                    Text(name[index],
+                                                                                                                        style: GoogleFonts.bitter(
+                                                                                                                          textStyle: TextStyle(
+                                                                                                                            fontSize: 32.h,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight.w600,
+                                                                                                                          ),
+                                                                                                                        )),
+
+                                                                                                                    Row(
+                                                                                                                      children: [
+                                                                                                                        Text("Herb ",
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+
+                                                                                                                        CircleAvatar(
+                                                                                                                          radius: 2.r,
+                                                                                                                          backgroundColor:
+                                                                                                                          Color(0xff166b4b),
+                                                                                                                        ),
+                                                                                                                        SizedBox(
+                                                                                                                          width: 5.w,
+                                                                                                                        ),
+                                                                                                                        Text(price[index],
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+                                                                                                                      ],
+                                                                                                                    ),
+                                                                                                                    SizedBox(height: 10.h,),
+                                                                                                                    Text(
+                                                                                                                        "121 people are growing this 🌿",
+                                                                                                                        style: TextStyle(
+                                                                                                                          fontSize: 14.sp,
+                                                                                                                          fontWeight: FontWeight.w400,
+                                                                                                                        )
+                                                                                                                    )
+
+                                                                                                                  ],
+                                                                                                                ),
+
+
+                                                                                                                Image.asset(
+                                                                                                                  img[index],
+                                                                                                                  width: 120.w,
+                                                                                                                  height: 120.h,
+                                                                                                                ),
+
+
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 30.h,
+                                                                                                            ),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Container(
+                                                                                                                  height: 52.h,
+                                                                                                                  width: 64.w,
+                                                                                                                  decoration: BoxDecoration(
+                                                                                                                      border: Border.all(
+                                                                                                                          color: Color(0xff166b4b),
+                                                                                                                          width: 2),
+                                                                                                                      borderRadius:
+                                                                                                                      BorderRadius
+                                                                                                                          .circular(4),
+                                                                                                                      color:
+                                                                                                                      Color(0xffffffff)),
+                                                                                                                  child: Icon(
+                                                                                                                    Icons.favorite_border,
+                                                                                                                    color: Color(0xff166b4b),
+                                                                                                                  ),
+                                                                                                                ),
+                                                                                                                SizedBox(
+                                                                                                                  width: 10.w,
+                                                                                                                ),
+                                                                                                                Container(
+                                                                                                                    height: 52.h,
+                                                                                                                    width: 250.w,
+                                                                                                                    decoration: BoxDecoration(
+                                                                                                                        borderRadius:
+                                                                                                                        BorderRadius
+                                                                                                                            .circular(4),
+                                                                                                                        color: Color(
+                                                                                                                            0xff166b4b)),
+                                                                                                                    child: Center(
+                                                                                                                      child: Text(
+                                                                                                                          "Add to Cart",
+                                                                                                                          style: TextStyle(
+                                                                                                                            color:
+                                                                                                                            Colors.white,
+                                                                                                                            fontSize: 18.sp,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight
+                                                                                                                                .w700,
+                                                                                                                          )),
+                                                                                                                    ))
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+
+                                                                                                            Text(
+                                                                                                                "Description",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                              "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                              style: GoogleFonts.lato(
+                                                                                                                  textStyle: TextStyle(
+                                                                                                                    fontSize: 14.sp,
+                                                                                                                    color: Color(0xBF111111),
+                                                                                                                    fontWeight: FontWeight.w400,
+                                                                                                                  )),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                                "Growing information",
+                                                                                                                style: TextStyle(
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Room temparature is fine",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Regular watering works best",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Image.asset("assets/plant1.png",
+                                                                                                                  width: 24,
+                                                                                                                  height: 24,
+                                                                                                                  color: Color(0xff96e8c8),
+                                                                                                                ),
+                                                                                                                Text(
+                                                                                                                    "Typically ready for harvest after 4 weeks",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(height: 20.h,),
+
+                                                                                                            Text(
+                                                                                                                "Other Herbs",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            )
+
+
+                                                                                                          ],
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    );
+                                                                                                  });
+                                                                                            },
+                                                                                            child: Text("Read more",
+                                                                                                style: TextStyle(
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                  fontSize: 20.sp,
+                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 30.h,
+                                                                                          ),
+                                                                                          Row(
+                                                                                            children: [
+                                                                                              Container(
+                                                                                                height: 52.h,
+                                                                                                width: 64.w,
+                                                                                                decoration: BoxDecoration(
+                                                                                                    border: Border.all(
+                                                                                                        color: Color(0xff166b4b),
+                                                                                                        width: 2),
+                                                                                                    borderRadius:
+                                                                                                    BorderRadius.circular(4),
+                                                                                                    color: Color(0xffffffff)),
+                                                                                                child: Icon(
+                                                                                                  Icons.favorite_border,
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                ),
+                                                                                              ),
+                                                                                              SizedBox(
+                                                                                                width: 10.w,
+                                                                                              ),
+                                                                                              Container(
+                                                                                                  height: 52.h,
+                                                                                                  width: 250.w,
+                                                                                                  decoration: BoxDecoration(
+                                                                                                      borderRadius:
+                                                                                                      BorderRadius.circular(4),
+                                                                                                      color: Color(0xff166b4b)),
+                                                                                                  child: Center(
+                                                                                                    child: Text("Add to Cart",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.white,
+                                                                                                          fontSize: 18.sp,
+                                                                                                          fontWeight:
+                                                                                                          FontWeight.w700,
+                                                                                                        )),
+                                                                                                  ))
+                                                                                            ],
+                                                                                          )
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                  );
+                                                                                });
+                                                                          },
+                                                                          child: Container(
+                                                                            width: 177.w,
+                                                                            height: 260.h,
+                                                                            decoration: BoxDecoration(
+                                                                                borderRadius: BorderRadius.circular(12),
+                                                                                color: Colors.white),
+                                                                            child: Column(
+                                                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                                                              children: [
+                                                                                Image.asset(
+                                                                                  img[index],
+                                                                                  width: 177.w,
+                                                                                  height: 177.h,
+                                                                                ),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(name[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 21.sp,
+                                                                                      fontWeight: FontWeight.w600,
+                                                                                    )),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(price[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 14.sp,
+                                                                                      fontWeight: FontWeight.w400,
+                                                                                    ))
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                      separatorBuilder: (BuildContext context, int index) {
+                                                                        return SizedBox(
+                                                                          width: 12.w,
+                                                                        );
+                                                                      },
+                                                                    ),
+                                                                  ),
+
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      });
+                                                },
+                                                child: Text("Read more",
+                                                    style: TextStyle(
+                                                      color: Color(0xff166b4b),
+                                                      fontSize: 20.sp,
+                                                      fontWeight: FontWeight.w700,
+                                                    )),
+                                              ),
                                               SizedBox(
                                                 height: 30.h,
                                               ),
@@ -478,10 +2282,10 @@ class _ShopState extends State<Shop> {
                                                         border: Border.all(
                                                             color: Color(
                                                                 0xff166b4b),
-                                                            width: 2),
+                                                            width: 2.w),
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(4),
+                                                                .circular(4.r),
                                                         color:
                                                             Color(0xffffffff)),
                                                     child: Icon(
@@ -640,7 +2444,7 @@ class _ShopState extends State<Shop> {
                                                               FontWeight.w600,
                                                         )),
                                                     CircleAvatar(
-                                                      radius: 2,
+                                                      radius: 2.r,
                                                       backgroundColor:
                                                           Color(0xff06492C),
                                                     ),
@@ -673,12 +2477,696 @@ class _ShopState extends State<Shop> {
                                               SizedBox(
                                                 height: 20.h,
                                               ),
-                                              Text("Read more",
-                                                  style: TextStyle(
-                                                    color: Color(0xff166b4b),
-                                                    fontSize: 20.sp,
-                                                    fontWeight: FontWeight.w700,
-                                                  )),
+                                              GestureDetector(
+                                                onTap: (){
+                                                  showModalBottomSheet(isScrollControlled: true,
+                                                      context: context,
+                                                      builder: (context) {
+                                                        return Container(
+                                                          height: 896.h,
+                                                          width: 375.w,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius.circular(32),
+                                                              color: Color(0xffffffff)),
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: 20.w, right: 20),
+                                                            child: SingleChildScrollView(
+                                                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: [
+
+                                                                  SizedBox(
+                                                                    height: 56.h,
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:  EdgeInsets.only(left: 140.w),
+                                                                    child: Image.asset("assets/curve_container.png",
+                                                                      width: 64,
+                                                                      height: 16,),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 40.h,
+                                                                  ),
+
+                                                                  Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                    children: [
+                                                                      Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          SizedBox(height: 20.h,),
+                                                                          Text(name[index],
+                                                                              style: GoogleFonts.bitter(
+                                                                                textStyle: TextStyle(
+                                                                                  fontSize: 32.h,
+                                                                                  fontWeight:
+                                                                                  FontWeight.w600,
+                                                                                ),
+                                                                              )),
+
+                                                                          Row(
+                                                                            children: [
+                                                                              Text("Herb ",
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+
+                                                                              CircleAvatar(
+                                                                                radius: 2.r,
+                                                                                backgroundColor:
+                                                                                Color(0xff166b4b),
+                                                                              ),
+                                                                              SizedBox(
+                                                                                width: 5.w,
+                                                                              ),
+                                                                              Text(price[index],
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+                                                                            ],
+                                                                          ),
+                                                                          SizedBox(height: 10.h,),
+                                                                          Text(
+                                                                              "121 people are growing this 🌿",
+                                                                              style: TextStyle(
+                                                                                fontSize: 14.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              )
+                                                                          )
+
+                                                                        ],
+                                                                      ),
+
+
+                                                                      Image.asset(
+                                                                        img[index],
+                                                                        width: 120.w,
+                                                                        height: 120.h,
+                                                                      ),
+
+
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 30.h,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Container(
+                                                                        height: 52.h,
+                                                                        width: 64.w,
+                                                                        decoration: BoxDecoration(
+                                                                            border: Border.all(
+                                                                                color: Color(0xff166b4b),
+                                                                                width: 2),
+                                                                            borderRadius:
+                                                                            BorderRadius
+                                                                                .circular(4),
+                                                                            color:
+                                                                            Color(0xffffffff)),
+                                                                        child: Icon(
+                                                                          Icons.favorite_border,
+                                                                          color: Color(0xff166b4b),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        width: 10.w,
+                                                                      ),
+                                                                      Container(
+                                                                          height: 52.h,
+                                                                          width: 250.w,
+                                                                          decoration: BoxDecoration(
+                                                                              borderRadius:
+                                                                              BorderRadius
+                                                                                  .circular(4),
+                                                                              color: Color(
+                                                                                  0xff166b4b)),
+                                                                          child: Center(
+                                                                            child: Text(
+                                                                                "Add to Cart",
+                                                                                style: TextStyle(
+                                                                                  color:
+                                                                                  Colors.white,
+                                                                                  fontSize: 18.sp,
+                                                                                  fontWeight:
+                                                                                  FontWeight
+                                                                                      .w700,
+                                                                                )),
+                                                                          ))
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+
+                                                                  Text(
+                                                                      "Description",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                    "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                    style: GoogleFonts.lato(
+                                                                        textStyle: TextStyle(
+                                                                          fontSize: 14.sp,
+                                                                          color: Color(0xBF111111),
+                                                                          fontWeight: FontWeight.w400,
+                                                                        )),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                      "Growing information",
+                                                                      style: TextStyle(
+                                                                        fontSize: 16.sp,
+                                                                        color: Colors.grey,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Room temparature is fine",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Regular watering works best",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+                                                                  Row(
+                                                                    children: [
+                                                                      Image.asset("assets/plant1.png",
+                                                                        width: 24,
+                                                                        height: 24,
+                                                                        color: Color(0xff96e8c8),
+                                                                      ),
+                                                                      Text(
+                                                                          "Typically ready for harvest after 4 weeks",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(height: 20.h,),
+
+                                                                  Text(
+                                                                      "Other Herbs",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    width: 600.w,
+                                                                    height: 265.h,
+                                                                    child: ListView.separated(
+                                                                      scrollDirection: Axis.horizontal,
+                                                                      padding: const EdgeInsets.all(8),
+                                                                      itemCount: img.length,
+                                                                      itemBuilder: (BuildContext context, int index) {
+                                                                        return GestureDetector(
+                                                                          onTap: () {
+                                                                            showModalBottomSheet(
+                                                                                context: context,
+                                                                                builder: (context) {
+                                                                                  return Container(
+                                                                                    height: 524.h,
+                                                                                    width: 375.w,
+                                                                                    decoration: BoxDecoration(
+                                                                                        borderRadius: BorderRadius.circular(32),
+                                                                                        color: Color(0xffffffff)),
+                                                                                    child: Padding(
+                                                                                      padding:
+                                                                                      EdgeInsets.only(left: 20.w, right: 20),
+                                                                                      child: Column(
+                                                                                        children: [
+                                                                                          SizedBox(
+                                                                                            height: 16.h,
+                                                                                          ),
+                                                                                          Container(
+                                                                                              width: 48.w,
+                                                                                              height: 8.h,
+                                                                                              decoration: BoxDecoration(
+                                                                                                  borderRadius:
+                                                                                                  BorderRadius.circular(4.r),
+                                                                                                  color: Color(0x3f06492c))),
+                                                                                          SizedBox(
+                                                                                            height: 40.h,
+                                                                                          ),
+                                                                                          Image.asset(
+                                                                                            img[index],
+                                                                                            width: 120.w,
+                                                                                            height: 120.h,
+                                                                                          ),
+                                                                                          Text(name[index],
+                                                                                              style: GoogleFonts.bitter(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 32.h,
+                                                                                                  fontWeight: FontWeight.w600,
+                                                                                                ),
+                                                                                              )),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsets.only(left: 124.w),
+                                                                                            child: Row(
+                                                                                              children: [
+                                                                                                Text("Herb ",
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                                CircleAvatar(
+                                                                                                  radius: 2.r,
+                                                                                                  backgroundColor:
+                                                                                                  Color(0xff06492C),
+                                                                                                ),
+                                                                                                SizedBox(
+                                                                                                  width: 5.w,
+                                                                                                ),
+                                                                                                Text(price[index],
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                              ],
+                                                                                            ),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          Text(
+                                                                                            "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                            style: GoogleFonts.lato(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 14.sp,
+                                                                                                  color: Color(0xBF111111),
+                                                                                                  fontWeight: FontWeight.w400,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          GestureDetector(
+                                                                                            onTap: (){
+                                                                                              showModalBottomSheet(isScrollControlled: true,
+                                                                                                  context: context,
+                                                                                                  builder: (context) {
+                                                                                                    return Container(
+                                                                                                      height: 896.h,
+                                                                                                      width: 375.w,
+                                                                                                      decoration: BoxDecoration(
+                                                                                                          borderRadius:
+                                                                                                          BorderRadius.circular(32),
+                                                                                                          color: Color(0xffffffff)),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsets.only(
+                                                                                                            left: 20.w, right: 20),
+                                                                                                        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                          children: [
+
+                                                                                                            SizedBox(
+                                                                                                              height: 56.h,
+                                                                                                            ),
+                                                                                                            Padding(
+                                                                                                              padding:  EdgeInsets.only(left: 140.w),
+                                                                                                              child: Image.asset("assets/curve_container.png",
+                                                                                                                width: 64,
+                                                                                                                height: 16,),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 40.h,
+                                                                                                            ),
+
+                                                                                                            Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                              children: [
+                                                                                                                Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                  children: [
+                                                                                                                    SizedBox(height: 20.h,),
+                                                                                                                    Text(name[index],
+                                                                                                                        style: GoogleFonts.bitter(
+                                                                                                                          textStyle: TextStyle(
+                                                                                                                            fontSize: 32.h,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight.w600,
+                                                                                                                          ),
+                                                                                                                        )),
+
+                                                                                                                    Row(
+                                                                                                                      children: [
+                                                                                                                        Text("Herb ",
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+
+                                                                                                                        CircleAvatar(
+                                                                                                                          radius: 2.r,
+                                                                                                                          backgroundColor:
+                                                                                                                          Color(0xff166b4b),
+                                                                                                                        ),
+                                                                                                                        SizedBox(
+                                                                                                                          width: 5.w,
+                                                                                                                        ),
+                                                                                                                        Text(price[index],
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+                                                                                                                      ],
+                                                                                                                    ),
+                                                                                                                    SizedBox(height: 10.h,),
+                                                                                                                    Text(
+                                                                                                                        "121 people are growing this 🌿",
+                                                                                                                        style: TextStyle(
+                                                                                                                          fontSize: 14.sp,
+                                                                                                                          fontWeight: FontWeight.w400,
+                                                                                                                        )
+                                                                                                                    )
+
+                                                                                                                  ],
+                                                                                                                ),
+
+
+                                                                                                                Image.asset(
+                                                                                                                  img[index],
+                                                                                                                  width: 120.w,
+                                                                                                                  height: 120.h,
+                                                                                                                ),
+
+
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 30.h,
+                                                                                                            ),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Container(
+                                                                                                                  height: 52.h,
+                                                                                                                  width: 64.w,
+                                                                                                                  decoration: BoxDecoration(
+                                                                                                                      border: Border.all(
+                                                                                                                          color: Color(0xff166b4b),
+                                                                                                                          width: 2),
+                                                                                                                      borderRadius:
+                                                                                                                      BorderRadius
+                                                                                                                          .circular(4),
+                                                                                                                      color:
+                                                                                                                      Color(0xffffffff)),
+                                                                                                                  child: Icon(
+                                                                                                                    Icons.favorite_border,
+                                                                                                                    color: Color(0xff166b4b),
+                                                                                                                  ),
+                                                                                                                ),
+                                                                                                                SizedBox(
+                                                                                                                  width: 10.w,
+                                                                                                                ),
+                                                                                                                Container(
+                                                                                                                    height: 52.h,
+                                                                                                                    width: 250.w,
+                                                                                                                    decoration: BoxDecoration(
+                                                                                                                        borderRadius:
+                                                                                                                        BorderRadius
+                                                                                                                            .circular(4),
+                                                                                                                        color: Color(
+                                                                                                                            0xff166b4b)),
+                                                                                                                    child: Center(
+                                                                                                                      child: Text(
+                                                                                                                          "Add to Cart",
+                                                                                                                          style: TextStyle(
+                                                                                                                            color:
+                                                                                                                            Colors.white,
+                                                                                                                            fontSize: 18.sp,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight
+                                                                                                                                .w700,
+                                                                                                                          )),
+                                                                                                                    ))
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+
+                                                                                                            Text(
+                                                                                                                "Description",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                              "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                              style: GoogleFonts.lato(
+                                                                                                                  textStyle: TextStyle(
+                                                                                                                    fontSize: 14.sp,
+                                                                                                                    color: Color(0xBF111111),
+                                                                                                                    fontWeight: FontWeight.w400,
+                                                                                                                  )),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                                "Growing information",
+                                                                                                                style: TextStyle(
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Room temparature is fine",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Regular watering works best",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Image.asset("assets/plant1.png",
+                                                                                                                  width: 24,
+                                                                                                                  height: 24,
+                                                                                                                  color: Color(0xff96e8c8),
+                                                                                                                ),
+                                                                                                                Text(
+                                                                                                                    "Typically ready for harvest after 4 weeks",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(height: 20.h,),
+
+                                                                                                            Text(
+                                                                                                                "Other Herbs",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            )
+
+
+                                                                                                          ],
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    );
+                                                                                                  });
+                                                                                            },
+                                                                                            child: Text("Read more",
+                                                                                                style: TextStyle(
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                  fontSize: 20.sp,
+                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 30.h,
+                                                                                          ),
+                                                                                          Row(
+                                                                                            children: [
+                                                                                              Container(
+                                                                                                height: 52.h,
+                                                                                                width: 64.w,
+                                                                                                decoration: BoxDecoration(
+                                                                                                    border: Border.all(
+                                                                                                        color: Color(0xff166b4b),
+                                                                                                        width: 2),
+                                                                                                    borderRadius:
+                                                                                                    BorderRadius.circular(4),
+                                                                                                    color: Color(0xffffffff)),
+                                                                                                child: Icon(
+                                                                                                  Icons.favorite_border,
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                ),
+                                                                                              ),
+                                                                                              SizedBox(
+                                                                                                width: 10.w,
+                                                                                              ),
+                                                                                              Container(
+                                                                                                  height: 52.h,
+                                                                                                  width: 250.w,
+                                                                                                  decoration: BoxDecoration(
+                                                                                                      borderRadius:
+                                                                                                      BorderRadius.circular(4),
+                                                                                                      color: Color(0xff166b4b)),
+                                                                                                  child: Center(
+                                                                                                    child: Text("Add to Cart",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.white,
+                                                                                                          fontSize: 18.sp,
+                                                                                                          fontWeight:
+                                                                                                          FontWeight.w700,
+                                                                                                        )),
+                                                                                                  ))
+                                                                                            ],
+                                                                                          )
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                  );
+                                                                                });
+                                                                          },
+                                                                          child: Container(
+                                                                            width: 177.w,
+                                                                            height: 260.h,
+                                                                            decoration: BoxDecoration(
+                                                                                borderRadius: BorderRadius.circular(12),
+                                                                                color: Colors.white),
+                                                                            child: Column(
+                                                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                                                              children: [
+                                                                                Image.asset(
+                                                                                  img[index],
+                                                                                  width: 177.w,
+                                                                                  height: 177.h,
+                                                                                ),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(name[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 21.sp,
+                                                                                      fontWeight: FontWeight.w600,
+                                                                                    )),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(price[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 14.sp,
+                                                                                      fontWeight: FontWeight.w400,
+                                                                                    ))
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                      separatorBuilder: (BuildContext context, int index) {
+                                                                        return SizedBox(
+                                                                          width: 12.w,
+                                                                        );
+                                                                      },
+                                                                    ),
+                                                                  ),
+
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      });
+                                                },
+                                                child: Text("Read more",
+                                                    style: TextStyle(
+                                                      color: Color(0xff166b4b),
+                                                      fontSize: 20.sp,
+                                                      fontWeight: FontWeight.w700,
+                                                    )),
+                                              ),
                                               SizedBox(
                                                 height: 30.h,
                                               ),
@@ -853,7 +3341,7 @@ class _ShopState extends State<Shop> {
                                                               FontWeight.w600,
                                                         )),
                                                     CircleAvatar(
-                                                      radius: 2,
+                                                      radius: 2.r,
                                                       backgroundColor:
                                                           Color(0xff06492C),
                                                     ),
@@ -901,140 +3389,669 @@ class _ShopState extends State<Shop> {
                                                           child: Padding(
                                                             padding: EdgeInsets.only(
                                                                 left: 20.w, right: 20),
-                                                            child: Column(
-                                                              children: [
+                                                            child: SingleChildScrollView(
+                                                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: [
 
-                                                                SizedBox(
-                                                                  height: 16.h,
-                                                                ),
-                                                               Image.asset("assets/curve_container.png",
-                                                               width: 64,
-                                                               height: 16,),
-                                                                SizedBox(
-                                                                  height: 40.h,
-                                                                ),
+                                                                  SizedBox(
+                                                                    height: 56.h,
+                                                                  ),
+                                                                 Padding(
+                                                                   padding:  EdgeInsets.only(left: 140.w),
+                                                                   child: Image.asset("assets/curve_container.png",
+                                                                   width: 64,
+                                                                   height: 16,),
+                                                                 ),
+                                                                  SizedBox(
+                                                                    height: 40.h,
+                                                                  ),
 
-                                                                Row(
-                                                                  children: [
-                                                                    Text(name[index],
-                                                                        style: GoogleFonts.bitter(
-                                                                          textStyle: TextStyle(
-                                                                            fontSize: 32.h,
-                                                                            fontWeight:
-                                                                            FontWeight.w600,
-                                                                          ),
-                                                                        )),
-                                                                  ],
-                                                                ),
-                                                                Image.asset(
-                                                                  img[index],
-                                                                  width: 120.w,
-                                                                  height: 120.h,
-                                                                ),
-
-                                                                Padding(
-                                                                  padding: EdgeInsets.only(
-                                                                      left: 124.w),
-                                                                  child: Row(
+                                                                  Row(crossAxisAlignment: CrossAxisAlignment.start,
                                                                     children: [
-                                                                      Text("Herb ",
-                                                                          style: TextStyle(
-                                                                            color:
-                                                                            Color(0xff166b4b),
-                                                                            fontSize: 21.sp,
-                                                                            fontWeight:
-                                                                            FontWeight.w600,
-                                                                          )),
-                                                                      CircleAvatar(
-                                                                        radius: 2.r,
-                                                                        backgroundColor:
-                                                                        Color(0xff06492C),
+                                                                      Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          SizedBox(height: 20.h,),
+                                                                          Text(name[index],
+                                                                              style: GoogleFonts.bitter(
+                                                                                textStyle: TextStyle(
+                                                                                  fontSize: 32.h,
+                                                                                  fontWeight:
+                                                                                  FontWeight.w600,
+                                                                                ),
+                                                                              )),
+
+                                                                          Row(
+                                                                            children: [
+                                                                              Text("Herb ",
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+
+                                                                              CircleAvatar(
+                                                                                radius: 2.r,
+                                                                                backgroundColor:
+                                                                                Color(0xff166b4b),
+                                                                              ),
+                                                                              SizedBox(
+                                                                                width: 5.w,
+                                                                              ),
+                                                                              Text(price[index],
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+                                                                            ],
+                                                                          ),
+                                                                          SizedBox(height: 10.h,),
+                                                                          Text(
+                                                                              "121 people are growing this 🌿",
+                                                                              style: TextStyle(
+                                                                                fontSize: 14.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              )
+                                                                          )
+
+                                                                        ],
                                                                       ),
-                                                                      SizedBox(
-                                                                        width: 5.w,
+
+
+                                                                      Image.asset(
+                                                                        img[index],
+                                                                        width: 120.w,
+                                                                        height: 120.h,
                                                                       ),
-                                                                      Text(price[index],
-                                                                          style: TextStyle(
-                                                                            color:
-                                                                            Color(0xff166b4b),
-                                                                            fontSize: 21.sp,
-                                                                            fontWeight:
-                                                                            FontWeight.w600,
-                                                                          )),
+
+
                                                                     ],
                                                                   ),
-                                                                ),
-                                                                SizedBox(
-                                                                  height: 20.h,
-                                                                ),
-                                                                Text(
-                                                                  "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
-                                                                  style: GoogleFonts.lato(
-                                                                      textStyle: TextStyle(
-                                                                        fontSize: 14.sp,
-                                                                        color: Color(0xBF111111),
-                                                                        fontWeight: FontWeight.w400,
-                                                                      )),
-                                                                ),
-                                                                SizedBox(
-                                                                  height: 20.h,
-                                                                ),
-                                                                Text("Read more",
-                                                                    style: TextStyle(
-                                                                      color: Color(0xff166b4b),
-                                                                      fontSize: 20.sp,
-                                                                      fontWeight: FontWeight.w700,
-                                                                    )),
-                                                                SizedBox(
-                                                                  height: 30.h,
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    Container(
-                                                                      height: 52.h,
-                                                                      width: 64.w,
-                                                                      decoration: BoxDecoration(
-                                                                          border: Border.all(
-                                                                              color: Color(
-                                                                                  0xff166b4b),
-                                                                              width: 2),
-                                                                          borderRadius:
-                                                                          BorderRadius
-                                                                              .circular(4),
-                                                                          color:
-                                                                          Color(0xffffffff)),
-                                                                      child: Icon(
-                                                                        Icons.favorite_border,
-                                                                        color: Color(0xff166b4b),
-                                                                      ),
-                                                                    ),
-                                                                    SizedBox(
-                                                                      width: 10.w,
-                                                                    ),
-                                                                    Container(
+
+                                                                  SizedBox(
+                                                                    height: 30.h,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Container(
                                                                         height: 52.h,
-                                                                        width: 250.w,
+                                                                        width: 64.w,
                                                                         decoration: BoxDecoration(
+                                                                            border: Border.all(
+                                                                                color: Color(0xff166b4b),
+                                                                                width: 2),
                                                                             borderRadius:
                                                                             BorderRadius
                                                                                 .circular(4),
-                                                                            color: Color(
-                                                                                0xff166b4b)),
-                                                                        child: Center(
-                                                                          child: Text(
-                                                                              "Add to Cart",
-                                                                              style: TextStyle(
-                                                                                color:
-                                                                                Colors.white,
-                                                                                fontSize: 18.sp,
-                                                                                fontWeight:
-                                                                                FontWeight
-                                                                                    .w700,
-                                                                              )),
-                                                                        ))
-                                                                  ],
-                                                                )
-                                                              ],
+                                                                            color:
+                                                                            Color(0xffffffff)),
+                                                                        child: Icon(
+                                                                          Icons.favorite_border,
+                                                                          color: Color(0xff166b4b),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        width: 10.w,
+                                                                      ),
+                                                                      Container(
+                                                                          height: 52.h,
+                                                                          width: 250.w,
+                                                                          decoration: BoxDecoration(
+                                                                              borderRadius:
+                                                                              BorderRadius
+                                                                                  .circular(4),
+                                                                              color: Color(
+                                                                                  0xff166b4b)),
+                                                                          child: Center(
+                                                                            child: Text(
+                                                                                "Add to Cart",
+                                                                                style: TextStyle(
+                                                                                  color:
+                                                                                  Colors.white,
+                                                                                  fontSize: 18.sp,
+                                                                                  fontWeight:
+                                                                                  FontWeight
+                                                                                      .w700,
+                                                                                )),
+                                                                          ))
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+
+                                                                  Text(
+                                                                      "Description",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                    "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                    style: GoogleFonts.lato(
+                                                                        textStyle: TextStyle(
+                                                                          fontSize: 14.sp,
+                                                                          color: Color(0xBF111111),
+                                                                          fontWeight: FontWeight.w400,
+                                                                        )),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                      "Growing information",
+                                                                      style: TextStyle(
+                                                                        fontSize: 16.sp,
+                                                                        color: Colors.grey,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Room temparature is fine",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Regular watering works best",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+                                                                  Row(
+                                                                    children: [
+                                                                      Image.asset("assets/plant1.png",
+                                                                        width: 24,
+                                                                        height: 24,
+                                                                        color: Color(0xff96e8c8),
+                                                                        ),
+                                                                      Text(
+                                                                          "Typically ready for harvest after 4 weeks",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(height: 20.h,),
+
+                                                                  Text(
+                                                                      "Other Herbs",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    width: 600.w,
+                                                                    height: 265.h,
+                                                                    child: ListView.separated(
+                                                                      scrollDirection: Axis.horizontal,
+                                                                      padding: const EdgeInsets.all(8),
+                                                                      itemCount: img.length,
+                                                                      itemBuilder: (BuildContext context, int index) {
+                                                                        return GestureDetector(
+                                                                          onTap: () {
+                                                                            showModalBottomSheet(
+                                                                                context: context,
+                                                                                builder: (context) {
+                                                                                  return Container(
+                                                                                    height: 524.h,
+                                                                                    width: 375.w,
+                                                                                    decoration: BoxDecoration(
+                                                                                        borderRadius: BorderRadius.circular(32),
+                                                                                        color: Color(0xffffffff)),
+                                                                                    child: Padding(
+                                                                                      padding:
+                                                                                      EdgeInsets.only(left: 20.w, right: 20),
+                                                                                      child: Column(
+                                                                                        children: [
+                                                                                          SizedBox(
+                                                                                            height: 16.h,
+                                                                                          ),
+                                                                                          Container(
+                                                                                              width: 48.w,
+                                                                                              height: 8.h,
+                                                                                              decoration: BoxDecoration(
+                                                                                                  borderRadius:
+                                                                                                  BorderRadius.circular(4.r),
+                                                                                                  color: Color(0x3f06492c))),
+                                                                                          SizedBox(
+                                                                                            height: 40.h,
+                                                                                          ),
+                                                                                          Image.asset(
+                                                                                            img[index],
+                                                                                            width: 120.w,
+                                                                                            height: 120.h,
+                                                                                          ),
+                                                                                          Text(name[index],
+                                                                                              style: GoogleFonts.bitter(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 32.h,
+                                                                                                  fontWeight: FontWeight.w600,
+                                                                                                ),
+                                                                                              )),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsets.only(left: 124.w),
+                                                                                            child: Row(
+                                                                                              children: [
+                                                                                                Text("Herb ",
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                                CircleAvatar(
+                                                                                                  radius: 2.r,
+                                                                                                  backgroundColor:
+                                                                                                  Color(0xff06492C),
+                                                                                                ),
+                                                                                                SizedBox(
+                                                                                                  width: 5.w,
+                                                                                                ),
+                                                                                                Text(price[index],
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                              ],
+                                                                                            ),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          Text(
+                                                                                            "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                            style: GoogleFonts.lato(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 14.sp,
+                                                                                                  color: Color(0xBF111111),
+                                                                                                  fontWeight: FontWeight.w400,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          GestureDetector(
+                                                                                            onTap: (){
+                                                                                              showModalBottomSheet(isScrollControlled: true,
+                                                                                                  context: context,
+                                                                                                  builder: (context) {
+                                                                                                    return Container(
+                                                                                                      height: 896.h,
+                                                                                                      width: 375.w,
+                                                                                                      decoration: BoxDecoration(
+                                                                                                          borderRadius:
+                                                                                                          BorderRadius.circular(32),
+                                                                                                          color: Color(0xffffffff)),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsets.only(
+                                                                                                            left: 20.w, right: 20),
+                                                                                                        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                          children: [
+
+                                                                                                            SizedBox(
+                                                                                                              height: 56.h,
+                                                                                                            ),
+                                                                                                            Padding(
+                                                                                                              padding:  EdgeInsets.only(left: 140.w),
+                                                                                                              child: Image.asset("assets/curve_container.png",
+                                                                                                                width: 64,
+                                                                                                                height: 16,),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 40.h,
+                                                                                                            ),
+
+                                                                                                            Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                              children: [
+                                                                                                                Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                  children: [
+                                                                                                                    SizedBox(height: 20.h,),
+                                                                                                                    Text(name[index],
+                                                                                                                        style: GoogleFonts.bitter(
+                                                                                                                          textStyle: TextStyle(
+                                                                                                                            fontSize: 32.h,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight.w600,
+                                                                                                                          ),
+                                                                                                                        )),
+
+                                                                                                                    Row(
+                                                                                                                      children: [
+                                                                                                                        Text("Herb ",
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+
+                                                                                                                        CircleAvatar(
+                                                                                                                          radius: 2.r,
+                                                                                                                          backgroundColor:
+                                                                                                                          Color(0xff166b4b),
+                                                                                                                        ),
+                                                                                                                        SizedBox(
+                                                                                                                          width: 5.w,
+                                                                                                                        ),
+                                                                                                                        Text(price[index],
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Color(0xff166b4b),
+                                                                                                                              fontSize: 21.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            )),
+                                                                                                                      ],
+                                                                                                                    ),
+                                                                                                                    SizedBox(height: 10.h,),
+                                                                                                                    Text(
+                                                                                                                        "121 people are growing this 🌿",
+                                                                                                                        style: TextStyle(
+                                                                                                                          fontSize: 14.sp,
+                                                                                                                          fontWeight: FontWeight.w400,
+                                                                                                                        )
+                                                                                                                    )
+
+                                                                                                                  ],
+                                                                                                                ),
+
+
+                                                                                                                Image.asset(
+                                                                                                                  img[index],
+                                                                                                                  width: 120.w,
+                                                                                                                  height: 120.h,
+                                                                                                                ),
+
+
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 30.h,
+                                                                                                            ),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Container(
+                                                                                                                  height: 52.h,
+                                                                                                                  width: 64.w,
+                                                                                                                  decoration: BoxDecoration(
+                                                                                                                      border: Border.all(
+                                                                                                                          color: Color(0xff166b4b),
+                                                                                                                          width: 2),
+                                                                                                                      borderRadius:
+                                                                                                                      BorderRadius
+                                                                                                                          .circular(4),
+                                                                                                                      color:
+                                                                                                                      Color(0xffffffff)),
+                                                                                                                  child: Icon(
+                                                                                                                    Icons.favorite_border,
+                                                                                                                    color: Color(0xff166b4b),
+                                                                                                                  ),
+                                                                                                                ),
+                                                                                                                SizedBox(
+                                                                                                                  width: 10.w,
+                                                                                                                ),
+                                                                                                                Container(
+                                                                                                                    height: 52.h,
+                                                                                                                    width: 250.w,
+                                                                                                                    decoration: BoxDecoration(
+                                                                                                                        borderRadius:
+                                                                                                                        BorderRadius
+                                                                                                                            .circular(4),
+                                                                                                                        color: Color(
+                                                                                                                            0xff166b4b)),
+                                                                                                                    child: Center(
+                                                                                                                      child: Text(
+                                                                                                                          "Add to Cart",
+                                                                                                                          style: TextStyle(
+                                                                                                                            color:
+                                                                                                                            Colors.white,
+                                                                                                                            fontSize: 18.sp,
+                                                                                                                            fontWeight:
+                                                                                                                            FontWeight
+                                                                                                                                .w700,
+                                                                                                                          )),
+                                                                                                                    ))
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+
+                                                                                                            Text(
+                                                                                                                "Description",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+
+
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                              "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                              style: GoogleFonts.lato(
+                                                                                                                  textStyle: TextStyle(
+                                                                                                                    fontSize: 14.sp,
+                                                                                                                    color: Color(0xBF111111),
+                                                                                                                    fontWeight: FontWeight.w400,
+                                                                                                                  )),
+                                                                                                            ),
+                                                                                                            SizedBox(
+                                                                                                              height: 20.h,
+                                                                                                            ),
+                                                                                                            Text(
+                                                                                                                "Growing information",
+                                                                                                                style: TextStyle(
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Room temparature is fine",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                                Text(
+                                                                                                                    "Regular watering works best",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+                                                                                                            SizedBox(height: 10.h,),
+                                                                                                            Row(
+                                                                                                              children: [
+                                                                                                                Image.asset("assets/plant1.png",
+                                                                                                                  width: 24,
+                                                                                                                  height: 24,
+                                                                                                                  color: Color(0xff96e8c8),
+                                                                                                                ),
+                                                                                                                Text(
+                                                                                                                    "Typically ready for harvest after 4 weeks",
+                                                                                                                    style: TextStyle(
+                                                                                                                      fontSize: 16.sp,
+                                                                                                                      fontWeight: FontWeight.w700,
+                                                                                                                    )
+                                                                                                                )
+                                                                                                              ],
+                                                                                                            ),
+
+                                                                                                            SizedBox(height: 20.h,),
+
+                                                                                                            Text(
+                                                                                                                "Other Herbs",
+                                                                                                                style: TextStyle(
+                                                                                                                  color: Colors.grey,
+                                                                                                                  fontSize: 16.sp,
+                                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                                )
+                                                                                                            )
+
+
+                                                                                                          ],
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    );
+                                                                                                  });
+                                                                                            },
+                                                                                            child: Text("Read more",
+                                                                                                style: TextStyle(
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                  fontSize: 20.sp,
+                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 30.h,
+                                                                                          ),
+                                                                                          Row(
+                                                                                            children: [
+                                                                                              Container(
+                                                                                                height: 52.h,
+                                                                                                width: 64.w,
+                                                                                                decoration: BoxDecoration(
+                                                                                                    border: Border.all(
+                                                                                                        color: Color(0xff166b4b),
+                                                                                                        width: 2),
+                                                                                                    borderRadius:
+                                                                                                    BorderRadius.circular(4),
+                                                                                                    color: Color(0xffffffff)),
+                                                                                                child: Icon(
+                                                                                                  Icons.favorite_border,
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                ),
+                                                                                              ),
+                                                                                              SizedBox(
+                                                                                                width: 10.w,
+                                                                                              ),
+                                                                                              Container(
+                                                                                                  height: 52.h,
+                                                                                                  width: 250.w,
+                                                                                                  decoration: BoxDecoration(
+                                                                                                      borderRadius:
+                                                                                                      BorderRadius.circular(4),
+                                                                                                      color: Color(0xff166b4b)),
+                                                                                                  child: Center(
+                                                                                                    child: Text("Add to Cart",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.white,
+                                                                                                          fontSize: 18.sp,
+                                                                                                          fontWeight:
+                                                                                                          FontWeight.w700,
+                                                                                                        )),
+                                                                                                  ))
+                                                                                            ],
+                                                                                          )
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                  );
+                                                                                });
+                                                                          },
+                                                                          child: Container(
+                                                                            width: 177.w,
+                                                                            height: 260.h,
+                                                                            decoration: BoxDecoration(
+                                                                                borderRadius: BorderRadius.circular(12),
+                                                                                color: Colors.white),
+                                                                            child: Column(
+                                                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                                                              children: [
+                                                                                Image.asset(
+                                                                                  img[index],
+                                                                                  width: 177.w,
+                                                                                  height: 177.h,
+                                                                                ),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(name[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 21.sp,
+                                                                                      fontWeight: FontWeight.w600,
+                                                                                    )),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(price[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 14.sp,
+                                                                                      fontWeight: FontWeight.w400,
+                                                                                    ))
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                      separatorBuilder: (BuildContext context, int index) {
+                                                                        return SizedBox(
+                                                                          width: 12.w,
+                                                                        );
+                                                                      },
+                                                                    ),
+                                                                  ),
+
+                                                                ],
+                                                              ),
                                                             ),
                                                           ),
                                                         );
@@ -1172,7 +4189,7 @@ class _ShopState extends State<Shop> {
                                         width: 375.w,
                                         decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(32),
+                                            BorderRadius.circular(32),
                                             color: Color(0xffffffff)),
                                         child: Padding(
                                           padding: EdgeInsets.only(
@@ -1187,10 +4204,10 @@ class _ShopState extends State<Shop> {
                                                   height: 8.h,
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              4.r),
+                                                      BorderRadius.circular(
+                                                          4.r),
                                                       color:
-                                                          Color(0x3f06492c))),
+                                                      Color(0x3f06492c))),
                                               SizedBox(
                                                 height: 40.h,
                                               ),
@@ -1204,7 +4221,7 @@ class _ShopState extends State<Shop> {
                                                     textStyle: TextStyle(
                                                       fontSize: 32.h,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                      FontWeight.w600,
                                                     ),
                                                   )),
                                               Padding(
@@ -1215,15 +4232,15 @@ class _ShopState extends State<Shop> {
                                                     Text("Herb ",
                                                         style: TextStyle(
                                                           color:
-                                                              Color(0xff166b4b),
+                                                          Color(0xff166b4b),
                                                           fontSize: 21.sp,
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                          FontWeight.w600,
                                                         )),
                                                     CircleAvatar(
                                                       radius: 2.r,
                                                       backgroundColor:
-                                                          Color(0xff06492C),
+                                                      Color(0xff06492C),
                                                     ),
                                                     SizedBox(
                                                       width: 5.w,
@@ -1231,10 +4248,10 @@ class _ShopState extends State<Shop> {
                                                     Text(price[index],
                                                         style: TextStyle(
                                                           color:
-                                                              Color(0xff166b4b),
+                                                          Color(0xff166b4b),
                                                           fontSize: 21.sp,
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                          FontWeight.w600,
                                                         )),
                                                   ],
                                                 ),
@@ -1246,20 +4263,706 @@ class _ShopState extends State<Shop> {
                                                 "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
                                                 style: GoogleFonts.lato(
                                                     textStyle: TextStyle(
-                                                  fontSize: 14.sp,
-                                                  color: Color(0xBF111111),
-                                                  fontWeight: FontWeight.w400,
-                                                )),
+                                                      fontSize: 14.sp,
+                                                      color: Color(0xBF111111),
+                                                      fontWeight: FontWeight.w400,
+                                                    )),
                                               ),
                                               SizedBox(
                                                 height: 20.h,
                                               ),
-                                              Text("Read more",
-                                                  style: TextStyle(
-                                                    color: Color(0xff166b4b),
-                                                    fontSize: 20.sp,
-                                                    fontWeight: FontWeight.w700,
-                                                  )),
+                                              GestureDetector(
+                                                onTap: (){
+                                                  showModalBottomSheet(isScrollControlled: true,
+                                                      context: context,
+                                                      builder: (context) {
+                                                        return Container(
+                                                          height: 896.h,
+                                                          width: 375.w,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius.circular(32),
+                                                              color: Color(0xffffffff)),
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: 20.w, right: 20),
+                                                            child: SingleChildScrollView(
+                                                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: [
+
+                                                                  SizedBox(
+                                                                    height: 56.h,
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:  EdgeInsets.only(left: 140.w),
+                                                                    child: Image.asset("assets/curve_container.png",
+                                                                      width: 64,
+                                                                      height: 16,),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 40.h,
+                                                                  ),
+
+                                                                  Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                    children: [
+                                                                      Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          SizedBox(height: 20.h,),
+                                                                          Text(name[index],
+                                                                              style: GoogleFonts.bitter(
+                                                                                textStyle: TextStyle(
+                                                                                  fontSize: 32.h,
+                                                                                  fontWeight:
+                                                                                  FontWeight.w600,
+                                                                                ),
+                                                                              )),
+
+                                                                          Row(
+                                                                            children: [
+                                                                              Text("Herb ",
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+
+                                                                              CircleAvatar(
+                                                                                radius: 2.r,
+                                                                                backgroundColor:
+                                                                                Color(0xff166b4b),
+                                                                              ),
+                                                                              SizedBox(
+                                                                                width: 5.w,
+                                                                              ),
+                                                                              Text(price[index],
+                                                                                  style: TextStyle(
+                                                                                    color:
+                                                                                    Color(0xff166b4b),
+                                                                                    fontSize: 21.sp,
+                                                                                    fontWeight:
+                                                                                    FontWeight.w600,
+                                                                                  )),
+                                                                            ],
+                                                                          ),
+                                                                          SizedBox(height: 10.h,),
+                                                                          Text(
+                                                                              "121 people are growing this 🌿",
+                                                                              style: TextStyle(
+                                                                                fontSize: 14.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              )
+                                                                          )
+
+                                                                        ],
+                                                                      ),
+
+
+                                                                      Image.asset(
+                                                                        img[index],
+                                                                        width: 120.w,
+                                                                        height: 120.h,
+                                                                      ),
+
+
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 30.h,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Container(
+                                                                        height: 52.h,
+                                                                        width: 64.w,
+                                                                        decoration: BoxDecoration(
+                                                                            border: Border.all(
+                                                                                color: Color(0xff166b4b),
+                                                                                width: 2),
+                                                                            borderRadius:
+                                                                            BorderRadius
+                                                                                .circular(4),
+                                                                            color:
+                                                                            Color(0xffffffff)),
+                                                                        child: Icon(
+                                                                          Icons.favorite_border,
+                                                                          color: Color(0xff166b4b),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        width: 10.w,
+                                                                      ),
+                                                                      Container(
+                                                                          height: 52.h,
+                                                                          width: 250.w,
+                                                                          decoration: BoxDecoration(
+                                                                              borderRadius:
+                                                                              BorderRadius
+                                                                                  .circular(4),
+                                                                              color: Color(
+                                                                                  0xff166b4b)),
+                                                                          child: Center(
+                                                                            child: Text(
+                                                                                "Add to Cart",
+                                                                                style: TextStyle(
+                                                                                  color:
+                                                                                  Colors.white,
+                                                                                  fontSize: 18.sp,
+                                                                                  fontWeight:
+                                                                                  FontWeight
+                                                                                      .w700,
+                                                                                )),
+                                                                          ))
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+
+                                                                  Text(
+                                                                      "Description",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                    "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                    style: GoogleFonts.lato(
+                                                                        textStyle: TextStyle(
+                                                                          fontSize: 14.sp,
+                                                                          color: Color(0xBF111111),
+                                                                          fontWeight: FontWeight.w400,
+                                                                        )),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: 20.h,
+                                                                  ),
+                                                                  Text(
+                                                                      "Growing information",
+                                                                      style: TextStyle(
+                                                                        fontSize: 16.sp,
+                                                                        color: Colors.grey,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Room temparature is fine",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+
+                                                                  Row(
+                                                                    children: [
+                                                                      Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                      Text(
+                                                                          "Regular watering works best",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(height: 10.h,),
+                                                                  Row(
+                                                                    children: [
+                                                                      Image.asset("assets/plant1.png",
+                                                                        width: 24,
+                                                                        height: 24,
+                                                                        color: Color(0xff96e8c8),
+                                                                      ),
+                                                                      Text(
+                                                                          "Typically ready for harvest after 4 weeks",
+                                                                          style: TextStyle(
+                                                                            fontSize: 16.sp,
+                                                                            fontWeight: FontWeight.w700,
+                                                                          )
+                                                                      )
+                                                                    ],
+                                                                  ),
+
+                                                                  SizedBox(height: 20.h,),
+
+                                                                  Text(
+                                                                      "Other Herbs",
+                                                                      style: TextStyle(
+                                                                        color: Colors.grey,
+                                                                        fontSize: 16.sp,
+                                                                        fontWeight: FontWeight.w700,
+                                                                      )
+                                                                  ),
+
+                                                                  SizedBox(
+                                                                    width: 600.w,
+                                                                    height: 265.h,
+                                                                    child: ListView.separated(
+                                                                      scrollDirection: Axis.horizontal,
+                                                                      padding: const EdgeInsets.all(8),
+                                                                      itemCount: img.length,
+                                                                      itemBuilder: (BuildContext context, int index) {
+                                                                        return GestureDetector(
+                                                                          onTap: () {
+                                                                            showModalBottomSheet(
+                                                                                context: context,
+                                                                                builder: (context) {
+                                                                                  return Container(
+                                                                                    height: 524.h,
+                                                                                    width: 375.w,
+                                                                                    decoration: BoxDecoration(
+                                                                                        borderRadius: BorderRadius.circular(32),
+                                                                                        color: Color(0xffffffff)),
+                                                                                    child: Padding(
+                                                                                      padding:
+                                                                                      EdgeInsets.only(left: 20.w, right: 20),
+                                                                                      child: Column(
+                                                                                        children: [
+                                                                                          SizedBox(
+                                                                                            height: 16.h,
+                                                                                          ),
+                                                                                          Container(
+                                                                                              width: 48.w,
+                                                                                              height: 8.h,
+                                                                                              decoration: BoxDecoration(
+                                                                                                  borderRadius:
+                                                                                                  BorderRadius.circular(4.r),
+                                                                                                  color: Color(0x3f06492c))),
+                                                                                          SizedBox(
+                                                                                            height: 40.h,
+                                                                                          ),
+                                                                                          Image.asset(
+                                                                                            img[index],
+                                                                                            width: 120.w,
+                                                                                            height: 120.h,
+                                                                                          ),
+                                                                                          Text(name[index],
+                                                                                              style: GoogleFonts.bitter(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 32.h,
+                                                                                                  fontWeight: FontWeight.w600,
+                                                                                                ),
+                                                                                              )),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsets.only(left: 124.w),
+                                                                                            child: Row(
+                                                                                              children: [
+                                                                                                Text("Herb ",
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                                CircleAvatar(
+                                                                                                  radius: 2.r,
+                                                                                                  backgroundColor:
+                                                                                                  Color(0xff06492C),
+                                                                                                ),
+                                                                                                SizedBox(
+                                                                                                  width: 5.w,
+                                                                                                ),
+                                                                                                Text(price[index],
+                                                                                                    style: TextStyle(
+                                                                                                      color: Color(0xff166b4b),
+                                                                                                      fontSize: 21.sp,
+                                                                                                      fontWeight: FontWeight.w600,
+                                                                                                    )),
+                                                                                              ],
+                                                                                            ),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          Text(
+                                                                                            "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.",
+                                                                                            style: GoogleFonts.lato(
+                                                                                                textStyle: TextStyle(
+                                                                                                  fontSize: 14.sp,
+                                                                                                  color: Color(0xBF111111),
+                                                                                                  fontWeight: FontWeight.w400,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 20.h,
+                                                                                          ),
+                                                                                          GestureDetector(
+                                                                                            onTap: (){
+                                                                                              showModalBottomSheet(isScrollControlled: true,
+                                                                                                  context: context,
+                                                                                                  builder: (context) {
+                                                                                                    return Container(
+                                                                                                      height: 896.h,
+                                                                                                      width: 375.w,
+                                                                                                      decoration: BoxDecoration(
+                                                                                                          borderRadius:
+                                                                                                          BorderRadius.circular(32),
+                                                                                                          color: Color(0xffffffff)),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsets.only(
+                                                                                                            left: 20.w, right: 20),
+                                                                                                        child: SingleChildScrollView(
+                                                                                                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                            children: [
+
+                                                                                                              SizedBox(
+                                                                                                                height: 56.h,
+                                                                                                              ),
+                                                                                                              Padding(
+                                                                                                                padding:  EdgeInsets.only(left: 140.w),
+                                                                                                                child: Image.asset("assets/curve_container.png",
+                                                                                                                  width: 64,
+                                                                                                                  height: 16,),
+                                                                                                              ),
+                                                                                                              SizedBox(
+                                                                                                                height: 40.h,
+                                                                                                              ),
+
+                                                                                                              Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                children: [
+                                                                                                                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                    children: [
+                                                                                                                      SizedBox(height: 20.h,),
+                                                                                                                      Text(name[index],
+                                                                                                                          style: GoogleFonts.bitter(
+                                                                                                                            textStyle: TextStyle(
+                                                                                                                              fontSize: 32.h,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight.w600,
+                                                                                                                            ),
+                                                                                                                          )),
+
+                                                                                                                      Row(
+                                                                                                                        children: [
+                                                                                                                          Text("Herb ",
+                                                                                                                              style: TextStyle(
+                                                                                                                                color:
+                                                                                                                                Color(0xff166b4b),
+                                                                                                                                fontSize: 21.sp,
+                                                                                                                                fontWeight:
+                                                                                                                                FontWeight.w600,
+                                                                                                                              )),
+
+                                                                                                                          CircleAvatar(
+                                                                                                                            radius: 2.r,
+                                                                                                                            backgroundColor:
+                                                                                                                            Color(0xff166b4b),
+                                                                                                                          ),
+                                                                                                                          SizedBox(
+                                                                                                                            width: 5.w,
+                                                                                                                          ),
+                                                                                                                          Text(price[index],
+                                                                                                                              style: TextStyle(
+                                                                                                                                color:
+                                                                                                                                Color(0xff166b4b),
+                                                                                                                                fontSize: 21.sp,
+                                                                                                                                fontWeight:
+                                                                                                                                FontWeight.w600,
+                                                                                                                              )),
+                                                                                                                        ],
+                                                                                                                      ),
+                                                                                                                      SizedBox(height: 10.h,),
+                                                                                                                      Text(
+                                                                                                                          "121 people are growing this 🌿",
+                                                                                                                          style: TextStyle(
+                                                                                                                            fontSize: 14.sp,
+                                                                                                                            fontWeight: FontWeight.w400,
+                                                                                                                          )
+                                                                                                                      )
+
+                                                                                                                    ],
+                                                                                                                  ),
+
+
+                                                                                                                  Image.asset(
+                                                                                                                    img[index],
+                                                                                                                    width: 120.w,
+                                                                                                                    height: 120.h,
+                                                                                                                  ),
+
+
+                                                                                                                ],
+                                                                                                              ),
+
+                                                                                                              SizedBox(
+                                                                                                                height: 30.h,
+                                                                                                              ),
+                                                                                                              Row(
+                                                                                                                children: [
+                                                                                                                  Container(
+                                                                                                                    height: 52.h,
+                                                                                                                    width: 64.w,
+                                                                                                                    decoration: BoxDecoration(
+                                                                                                                        border: Border.all(
+                                                                                                                            color: Color(0xff166b4b),
+                                                                                                                            width: 2),
+                                                                                                                        borderRadius:
+                                                                                                                        BorderRadius
+                                                                                                                            .circular(4),
+                                                                                                                        color:
+                                                                                                                        Color(0xffffffff)),
+                                                                                                                    child: Icon(
+                                                                                                                      Icons.favorite_border,
+                                                                                                                      color: Color(0xff166b4b),
+                                                                                                                    ),
+                                                                                                                  ),
+                                                                                                                  SizedBox(
+                                                                                                                    width: 10.w,
+                                                                                                                  ),
+                                                                                                                  Container(
+                                                                                                                      height: 52.h,
+                                                                                                                      width: 250.w,
+                                                                                                                      decoration: BoxDecoration(
+                                                                                                                          borderRadius:
+                                                                                                                          BorderRadius
+                                                                                                                              .circular(4),
+                                                                                                                          color: Color(
+                                                                                                                              0xff166b4b)),
+                                                                                                                      child: Center(
+                                                                                                                        child: Text(
+                                                                                                                            "Add to Cart",
+                                                                                                                            style: TextStyle(
+                                                                                                                              color:
+                                                                                                                              Colors.white,
+                                                                                                                              fontSize: 18.sp,
+                                                                                                                              fontWeight:
+                                                                                                                              FontWeight
+                                                                                                                                  .w700,
+                                                                                                                            )),
+                                                                                                                      ))
+                                                                                                                ],
+                                                                                                              ),
+
+                                                                                                              SizedBox(
+                                                                                                                height: 20.h,
+                                                                                                              ),
+
+                                                                                                              Text(
+                                                                                                                  "Description",
+                                                                                                                  style: TextStyle(
+                                                                                                                    color: Colors.grey,
+                                                                                                                    fontSize: 16.sp,
+                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                  )
+                                                                                                              ),
+
+
+                                                                                                              SizedBox(
+                                                                                                                height: 20.h,
+                                                                                                              ),
+                                                                                                              Text(
+                                                                                                                "Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.",
+                                                                                                                style: GoogleFonts.lato(
+                                                                                                                    textStyle: TextStyle(
+                                                                                                                      fontSize: 14.sp,
+                                                                                                                      color: Color(0xBF111111),
+                                                                                                                      fontWeight: FontWeight.w400,
+                                                                                                                    )),
+                                                                                                              ),
+                                                                                                              SizedBox(
+                                                                                                                height: 20.h,
+                                                                                                              ),
+                                                                                                              Text(
+                                                                                                                  "Growing information",
+                                                                                                                  style: TextStyle(
+                                                                                                                    fontSize: 16.sp,
+                                                                                                                    color: Colors.grey,
+                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                  )
+                                                                                                              ),
+                                                                                                              SizedBox(height: 10.h,),
+
+                                                                                                              Row(
+                                                                                                                children: [
+                                                                                                                  Icon(Icons.thermostat_outlined, color: Color(0xff96e8c8),),
+                                                                                                                  Text(
+                                                                                                                      "Room temparature is fine",
+                                                                                                                      style: TextStyle(
+                                                                                                                        fontSize: 16.sp,
+                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                      )
+                                                                                                                  )
+                                                                                                                ],
+                                                                                                              ),
+                                                                                                              SizedBox(height: 10.h,),
+
+                                                                                                              Row(
+                                                                                                                children: [
+                                                                                                                  Icon(Icons.water_drop_outlined, color: Color(0xff96e8c8),),
+                                                                                                                  Text(
+                                                                                                                      "Regular watering works best",
+                                                                                                                      style: TextStyle(
+                                                                                                                        fontSize: 16.sp,
+                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                      )
+                                                                                                                  )
+                                                                                                                ],
+                                                                                                              ),
+                                                                                                              SizedBox(height: 10.h,),
+                                                                                                              Row(
+                                                                                                                children: [
+                                                                                                                  Image.asset("assets/plant1.png",
+                                                                                                                    width: 24,
+                                                                                                                    height: 24,
+                                                                                                                    color: Color(0xff96e8c8),
+                                                                                                                  ),
+                                                                                                                  Text(
+                                                                                                                      "Typically ready for harvest after 4 weeks",
+                                                                                                                      style: TextStyle(
+                                                                                                                        fontSize: 16.sp,
+                                                                                                                        fontWeight: FontWeight.w700,
+                                                                                                                      )
+                                                                                                                  )
+                                                                                                                ],
+                                                                                                              ),
+
+                                                                                                              SizedBox(height: 20.h,),
+
+                                                                                                              Text(
+                                                                                                                  "Other Herbs",
+                                                                                                                  style: TextStyle(
+                                                                                                                    color: Colors.grey,
+                                                                                                                    fontSize: 16.sp,
+                                                                                                                    fontWeight: FontWeight.w700,
+                                                                                                                  )
+                                                                                                              )
+
+
+                                                                                                            ],
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    );
+                                                                                                  });
+                                                                                            },
+                                                                                            child: Text("Read more",
+                                                                                                style: TextStyle(
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                  fontSize: 20.sp,
+                                                                                                  fontWeight: FontWeight.w700,
+                                                                                                )),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 30.h,
+                                                                                          ),
+                                                                                          Row(
+                                                                                            children: [
+                                                                                              Container(
+                                                                                                height: 52.h,
+                                                                                                width: 64.w,
+                                                                                                decoration: BoxDecoration(
+                                                                                                    border: Border.all(
+                                                                                                        color: Color(0xff166b4b),
+                                                                                                        width: 2),
+                                                                                                    borderRadius:
+                                                                                                    BorderRadius.circular(4),
+                                                                                                    color: Color(0xffffffff)),
+                                                                                                child: Icon(
+                                                                                                  Icons.favorite_border,
+                                                                                                  color: Color(0xff166b4b),
+                                                                                                ),
+                                                                                              ),
+                                                                                              SizedBox(
+                                                                                                width: 10.w,
+                                                                                              ),
+                                                                                              Container(
+                                                                                                  height: 52.h,
+                                                                                                  width: 250.w,
+                                                                                                  decoration: BoxDecoration(
+                                                                                                      borderRadius:
+                                                                                                      BorderRadius.circular(4),
+                                                                                                      color: Color(0xff166b4b)),
+                                                                                                  child: Center(
+                                                                                                    child: Text("Add to Cart",
+                                                                                                        style: TextStyle(
+                                                                                                          color: Colors.white,
+                                                                                                          fontSize: 18.sp,
+                                                                                                          fontWeight:
+                                                                                                          FontWeight.w700,
+                                                                                                        )),
+                                                                                                  ))
+                                                                                            ],
+                                                                                          )
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                  );
+                                                                                });
+                                                                          },
+                                                                          child: Container(
+                                                                            width: 177.w,
+                                                                            height: 260.h,
+                                                                            decoration: BoxDecoration(
+                                                                                borderRadius: BorderRadius.circular(12),
+                                                                                color: Colors.white),
+                                                                            child: Column(
+                                                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                                                              children: [
+                                                                                Image.asset(
+                                                                                  img[index],
+                                                                                  width: 177.w,
+                                                                                  height: 177.h,
+                                                                                ),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(name[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 21.sp,
+                                                                                      fontWeight: FontWeight.w600,
+                                                                                    )),
+                                                                                SizedBox(
+                                                                                  height: 10.h,
+                                                                                ),
+                                                                                Text(price[index],
+                                                                                    style: TextStyle(
+                                                                                      fontSize: 14.sp,
+                                                                                      fontWeight: FontWeight.w400,
+                                                                                    ))
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                      separatorBuilder: (BuildContext context, int index) {
+                                                                        return SizedBox(
+                                                                          width: 12.w,
+                                                                        );
+                                                                      },
+                                                                    ),
+                                                                  ),
+
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      });
+                                                },
+                                                child: Text("Read more",
+                                                    style: TextStyle(
+                                                      color: Color(0xff166b4b),
+                                                      fontSize: 20.sp,
+                                                      fontWeight: FontWeight.w700,
+                                                    )),
+                                              ),
                                               SizedBox(
                                                 height: 30.h,
                                               ),
@@ -1272,12 +4975,12 @@ class _ShopState extends State<Shop> {
                                                         border: Border.all(
                                                             color: Color(
                                                                 0xff166b4b),
-                                                            width: 2.w),
+                                                            width: 2),
                                                         borderRadius:
-                                                            BorderRadius
-                                                                .circular(4),
+                                                        BorderRadius
+                                                            .circular(4),
                                                         color:
-                                                            Color(0xffffffff)),
+                                                        Color(0xffffffff)),
                                                     child: Icon(
                                                       Icons.favorite_border,
                                                       color: Color(0xff166b4b),
@@ -1291,8 +4994,8 @@ class _ShopState extends State<Shop> {
                                                       width: 250.w,
                                                       decoration: BoxDecoration(
                                                           borderRadius:
-                                                              BorderRadius
-                                                                  .circular(4),
+                                                          BorderRadius
+                                                              .circular(4),
                                                           color: Color(
                                                               0xff166b4b)),
                                                       child: Center(
@@ -1300,11 +5003,11 @@ class _ShopState extends State<Shop> {
                                                             "Add to Cart",
                                                             style: TextStyle(
                                                               color:
-                                                                  Colors.white,
+                                                              Colors.white,
                                                               fontSize: 18.sp,
                                                               fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
+                                                              FontWeight
+                                                                  .w700,
                                                             )),
                                                       ))
                                                 ],
